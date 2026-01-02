@@ -22,6 +22,52 @@
   * {
     box-sizing: border-box;
   }
+<script>
+  const texts = [
+    "Data Analyst",
+    "Creative Thinking"
+  ];
+
+  let count = 0;
+  let index = 0;
+  let currentText = "";
+  let letter = "";
+
+  (function type() {
+    if (count === texts.length) {
+      count = 0;
+    }
+
+    currentText = texts[count];
+    letter = currentText.slice(0, ++index);
+
+    document.getElementById("typing-text").textContent = letter;
+
+    if (letter.length === currentText.length) {
+      setTimeout(() => {
+        erase();
+      }, 1500);
+      return;
+    }
+
+    setTimeout(type, 120);
+  })();
+
+  function erase() {
+    letter = currentText.slice(0, --index);
+    document.getElementById("typing-text").textContent = letter;
+
+    if (letter.length === 0) {
+      count++;
+      setTimeout(() => {
+        type();
+      }, 500);
+      return;
+    }
+
+    setTimeout(erase, 60);
+  }
+</script>
 
   body {
     margin: 0;
@@ -297,8 +343,8 @@
     <h2>Divyanshu Negi</h2>
 
     <p class="tagline">
-      Data Analyst <span>|</span> Creative Thinking
-    </p>
+  <span id="typing-text"></span>
+</p> 
 
     <p class="desc">
       Leveraging Python, SQL, and Power BI to turn data into meaningful insights.
