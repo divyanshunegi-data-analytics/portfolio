@@ -130,8 +130,160 @@
     text-align: center;
     padding: 30px 10px;
   }
-</style>
+    .hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
 
+.hero-left {
+  max-width: 520px;
+}
+
+.hero-left h1 {
+  font-size: 42px;
+  margin-bottom: 0;
+}
+
+.hero-left h2 {
+  font-size: 54px;
+  color: var(--accent);
+  margin: 10px 0;
+}
+
+.tagline {
+  font-size: 20px;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.tagline span {
+  color: var(--accent);
+  padding: 0 8px;
+}
+
+.desc {
+  color: var(--muted);
+  margin-bottom: 26px;
+}
+
+.hero-right {
+  position: relative;
+}
+
+.photo-ring {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+}
+
+.photo-ring img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* bubbles */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(56,189,248,0.25);
+  animation: float 6s ease-in-out infinite;
+}
+
+.b1 {
+  width: 80px;
+  height: 80px;
+  top: 20%;
+  left: 45%;
+}
+
+.b2 {
+  width: 40px;
+  height: 40px;
+  bottom: 25%;
+  left: 55%;
+  animation-delay: 2s;
+}
+
+.b3 {
+  width: 60px;
+  height: 60px;
+  top: 55%;
+  left: 40%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+</style>
+  /* ===== PREMIUM HERO UPGRADE ===== */
+
+.hero {
+  background:
+    radial-gradient(circle at top left, rgba(56,189,248,0.12), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(99,102,241,0.12), transparent 40%);
+}
+
+/* animated gradient ring */
+.premium-ring {
+  position: relative;
+}
+
+.premium-ring::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: linear-gradient(
+    120deg,
+    #38bdf8,
+    #6366f1,
+    #22d3ee
+  );
+  filter: blur(6px);
+  animation: spin 6s linear infinite;
+  z-index: -1;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* text polish */
+.hero-left h1 {
+  letter-spacing: 1px;
+  opacity: 0.95;
+}
+
+.hero-left h2 {
+  font-weight: 800;
+}
+
+.tagline {
+  font-weight: 500;
+}
+
+/* premium bubble motion */
+.bubble {
+  animation: floatPremium 8s ease-in-out infinite;
+}
+
+@keyframes floatPremium {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.05); }
+  100% { transform: translateY(0) scale(1); }
+}
 </head>
 
 <body>
@@ -144,10 +296,35 @@
   <a href="#contact">Contact</a>
 </nav>
 
-<section id="home">
-  <h1>Divyanshu Negi</h1>
-  <h2>Data Analyst Intern</h2>
-  <p>Python | SQL | Power BI | Tableau | Excel</p>
+<section id="home" class="hero">
+
+  <div class="hero-left">
+    <h1>Hi, I'm</h1>
+    <h2>Divyanshu Negi</h2>
+
+    <p class="tagline">
+      Data Analyst <span>|</span> Creative Thinking
+    </p>
+
+    <p class="desc">
+      Leveraging Python, SQL, and Power BI to turn data into meaningful insights.
+    </p>
+
+    <div class="buttons">
+      <a class="btn-primary" href="#projects">View My Work</a>
+      <a class="btn-outline" href="#contact">Get In Touch</a>
+    </div>
+  </div>
+
+  <div class="photo-ring premium-ring">
+  <img src="profile-photo (1).jpg" alt="Divyanshu Negi">
+</div>
+
+  <!-- bubbles -->
+  <span class="bubble b1"></span>
+  <span class="bubble b2"></span>
+  <span class="bubble b3"></span>
+
 </section>
   
 <img src="profile-photo (1).jpg"
