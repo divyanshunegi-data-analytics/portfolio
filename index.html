@@ -10,45 +10,116 @@
   <meta name="keywords" content="Data Analyst Intern, Python, SQL, Power BI, Tableau, Excel">
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-    }
-    nav {
-      background: #111;
-      padding: 12px;
-      text-align: center;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 12px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    #home {
-      background: #f4f4f4;
-    }
-    #skills ul {
-      list-style: none;
-      padding: 0;
-    }
-    #skills li {
-      display: inline-block;
-      margin: 8px 15px;
-      font-weight: bold;
-    }
-    footer {
-      background: #111;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-  </style>
+  :root {
+    --primary: #0f172a;
+    --accent: #2563eb;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #475569;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: Inter, Arial, sans-serif;
+    margin: 0;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #0b1220;
+    padding: 14px 10px;
+    text-align: center;
+  }
+
+  nav a {
+    color: #e5e7eb;
+    margin: 0 14px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  nav a:hover { color: #fff; }
+
+  section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 72px 20px;
+  }
+
+  #home {
+    text-align: center;
+    padding-top: 96px;
+  }
+
+  #home h1 {
+    font-size: 40px;
+    margin-bottom: 6px;
+  }
+
+  #home h2 {
+    font-size: 22px;
+    color: var(--muted);
+    margin-top: 0;
+  }
+
+  .buttons a {
+    display: inline-block;
+    margin: 14px 10px 0;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .btn-outline {
+    border: 2px solid var(--accent);
+    color: var(--accent);
+  }
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 18px;
+  }
+
+  .card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 10px 30px rgba(2,6,23,.08);
+    margin-bottom: 22px;
+  }
+
+  #skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 10px 24px;
+    padding-left: 18px;
+  }
+
+  .project ul { padding-left: 18px; }
+
+  footer {
+    background: #0b1220;
+    color: #cbd5f5;
+    text-align: center;
+    padding: 26px 10px;
+  }
+
+  footer a { color: #cbd5f5; }
+</style>
+
 </head>
 
 <body>
@@ -95,6 +166,12 @@
     <li>Microsoft Excel (Pivot Tables, Charts)</li>
   </ul>
 
+  <div class="buttons">
+  <a class="btn-primary" href="#projects">View Projects</a>
+  <a class="btn-outline" href="#resume">Download Resume</a>
+</div>
+
+
   <h3>Data Analysis</h3>
   <ul>
     <li>Data Cleaning & Preprocessing</li>
@@ -109,7 +186,7 @@
 <section id="projects">
   <h2>Projects</h2>
 
-  <div class="project">
+  <div class="card project">
     <h3>IPL Data Analysis (2008–2019)</h3>
     <p><strong>Tools:</strong> Python, Pandas, NumPy, Matplotlib</p>
     <ul>
