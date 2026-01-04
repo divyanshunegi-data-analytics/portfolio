@@ -150,6 +150,20 @@ footer{
   color:var(--muted);
   border-top:1px solid var(--border);
 }
+  .skill-bar {
+  background:#1f2937;
+  border-radius:10px;
+  overflow:hidden;
+  height:8px;
+  margin-bottom:18px;
+}
+
+.skill-bar div {
+  height:100%;
+  background:linear-gradient(90deg,#38bdf8,#6366f1);
+  border-radius:10px;
+}
+
 </style>
 </head>
 <body>
@@ -210,18 +224,66 @@ footer{
   </div>
 </section>
 
-
 <section id="skills">
-<h2>Skills</h2>
-<div class="card">
-<ul>
-<li>Python (Pandas, NumPy, Matplotlib)</li>
-<li>SQL</li>
-<li>Power BI</li>
-<li>Tableau</li>
-<li>Excel</li>
-</ul>
-</div>
+  <h2 style="text-align:center;">Skills & Expertise</h2>
+  <p style="text-align:center; color:var(--muted); margin-bottom:50px;">
+    Technologies and tools I work with as a Data Analyst
+  </p>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px;">
+
+    <!-- Data Visualization & Analysis -->
+    <div class="card">
+      <h3 style="text-align:center;">Data Visualization & Analysis</h3>
+
+      <p>Power BI <span style="float:right;">90%</span></p>
+      <div class="skill-bar"><div style="width:90%"></div></div>
+
+      <p>Tableau <span style="float:right;">85%</span></p>
+      <div class="skill-bar"><div style="width:85%"></div></div>
+
+      <p>Excel <span style="float:right;">95%</span></p>
+      <div class="skill-bar"><div style="width:95%"></div></div>
+
+      <p>Matplotlib (Python) <span style="float:right;">80%</span></p>
+      <div class="skill-bar"><div style="width:80%"></div></div>
+    </div>
+
+    <!-- Data Cleaning & Processing -->
+    <div class="card">
+      <h3 style="text-align:center;">Data Cleaning & Processing</h3>
+
+      <p>Python (Pandas, NumPy) <span style="float:right;">90%</span></p>
+      <div class="skill-bar"><div style="width:90%"></div></div>
+
+      <p>SQL (Joins, Aggregations) <span style="float:right;">85%</span></p>
+      <div class="skill-bar"><div style="width:85%"></div></div>
+
+      <p>Data Cleaning & Preprocessing <span style="float:right;">90%</span></p>
+      <div class="skill-bar"><div style="width:90%"></div></div>
+
+      <p>EDA (Exploratory Analysis) <span style="float:right;">85%</span></p>
+      <div class="skill-bar"><div style="width:85%"></div></div>
+    </div>
+
+    <!-- Tools & Others -->
+    <div class="card">
+      <h3 style="text-align:center;">Tools & Others</h3>
+
+      <p>Google Sheets <span style="float:right;">90%</span></p>
+      <div class="skill-bar"><div style="width:90%"></div></div>
+
+      <p>Git & GitHub <span style="float:right;">85%</span></p>
+      <div class="skill-bar"><div style="width:85%"></div></div>
+
+      <p>CSV / Excel Handling <span style="float:right;">95%</span></p>
+      <div class="skill-bar"><div style="width:95%"></div></div>
+
+      <p>Dashboard Design <span style="float:right;">88%</span></p>
+      <div class="skill-bar"><div style="width:88%"></div></div>
+    </div>
+
+  </div>
 </section>
 
 <section id="projects">
