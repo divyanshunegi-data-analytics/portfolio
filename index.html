@@ -9,7 +9,7 @@
 <meta name="keywords" content="Data Analyst Intern, Python, SQL, Power BI, Tableau, Excel">
 
 <style>
-:root {
+:root{
   --bg:#0b0f19;
   --card:#121826;
   --text:#e5e7eb;
@@ -23,13 +23,16 @@ body{
   font-family:Inter,Arial,sans-serif;
   background:var(--bg);
   color:var(--text);
+  line-height:1.7;
 }
 nav{
-  position:sticky;top:0;
+  position:sticky;
+  top:0;
   background:rgba(11,15,25,.9);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
   padding:14px;
   text-align:center;
-  border-bottom:1px solid var(--border);
   z-index:10;
 }
 nav a{
@@ -91,7 +94,7 @@ section{
   color:var(--accent);
 }
 
-/* photo */
+/* PHOTO */
 .photo-ring{
   width:360px;height:360px;
   border-radius:50%;
@@ -115,7 +118,7 @@ section{
 }
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* bubbles */
+/* BUBBLES */
 .bubble{
   position:absolute;
   border-radius:50%;
@@ -131,7 +134,7 @@ section{
   100%{transform:translateY(0)}
 }
 
-/* cards */
+/* CARDS */
 .card{
   background:var(--card);
   border:1px solid var(--border);
@@ -165,10 +168,10 @@ footer{
     <h1>Hi, I'm</h1>
     <h2>Divyanshu Negi</h2>
     <p class="tagline"><span id="typing-text"></span></p>
-    <p class="desc">Turning data into meaningful insights using Python, SQL & Power BI.</p>
+    <p class="desc">Leveraging Python, SQL, and Power BI to turn data into meaningful insights.</p>
     <div class="buttons">
-      <a class="btn-primary" href="#projects">View Work</a>
-      <a class="btn-outline" href="#contact">Contact</a>
+      <a class="btn-primary" href="#projects">View My Work</a>
+      <a class="btn-outline" href="#contact">Get In Touch</a>
     </div>
   </div>
 
@@ -184,7 +187,7 @@ footer{
 <section id="about">
 <h2>About Me</h2>
 <div class="card">
-<p>I am a Data Analyst Intern with hands-on experience in Python, SQL, Power BI, and data visualization.</p>
+<p>Data Analyst Intern with hands-on experience in Python, SQL, Power BI, Tableau and data visualization.</p>
 </div>
 </section>
 
@@ -217,24 +220,24 @@ footer{
 
 <footer>© 2026 Divyanshu Negi</footer>
 
-<!-- ===== TYPING SCRIPT ===== -->
+<!-- TYPING EFFECT -->
 <script>
-const roles=["Data Analyst","Creative Thinking"];
+const roles=["Data Analyst","Critical Thinking"];
 let r=0,c=0,del=false;
-function typeLoop(){
+function loop(){
   const el=document.getElementById("typing-text");
   if(!el)return;
   const word=roles[r];
   if(!del){
     el.textContent=word.slice(0,++c);
-    if(c===word.length){setTimeout(()=>del=true,1200);}
+    if(c===word.length)setTimeout(()=>del=true,1200);
   }else{
     el.textContent=word.slice(0,--c);
     if(c===0){del=false;r=(r+1)%roles.length;}
   }
-  setTimeout(typeLoop,del?70:120);
+  setTimeout(loop,del?70:120);
 }
-document.addEventListener("DOMContentLoaded",typeLoop);
+document.addEventListener("DOMContentLoaded",loop);
 </script>
 
 </body>
