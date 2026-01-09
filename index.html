@@ -2,60 +2,48 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Divyanshu Negi | Data Analyst Intern</title>
+<title>Divyanshu Negi | Data Analyst</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter&display=swap" rel="stylesheet">
 
 <meta name="description" content="Divyanshu Negi - Data Analyst Intern skilled in Python, SQL, Power BI, Tableau, Excel.">
-<meta name="keywords" content="Data Analyst Intern, Python, SQL, Power BI, Tableau, Excel">
 
 <style>
-  #skills {
-  background: #0f111a;
+:root{
+  --bg:#0a0a0f;
+  --card:#14141c;
+  --text:#f5f5f5;
+  --muted:#b0b0b0;
+  --accent:#c9a24d;
+  --border:#2a2a35;
 }
 
-#skills h2 {
-  color: #c9a24d;
-}
-
-#skills p {
-  color: #e5e7eb;
-}
-
-#skills .card {
-  background: #151824;
-  border: 1px solid rgba(201,162,77,0.25);
-}
-:root {
-  --bg: #0a0a0f;
-  --card: #14141c;
-  --text: #f5f5f5;
-  --muted: #b0b0b0;
-  --accent: #c9a24d;   /* royal gold */
-  --border: #2a2a35;
-}
 *{box-sizing:border-box}
+
 body{
- body {
   margin:0;
-  font-family: 'Inter', sans-serif;
+  font-family:'Inter',sans-serif;
   background:var(--bg);
   color:var(--text);
 }
-  h1, h2, h3 {
-  font-family: 'Cinzel', serif;
-  letter-spacing: 1px;
+
+h1,h2,h3{
+  font-family:'Cinzel',serif;
+  letter-spacing:1px;
 }
+
 nav{
   position:sticky;
   top:0;
-  background:rgba(11,15,25,.9);
-  backdrop-filter:blur(10px);
+  background:rgba(10,10,15,.85);
+  backdrop-filter:blur(12px);
   border-bottom:1px solid var(--border);
   padding:14px;
   text-align:center;
   z-index:10;
 }
+
 nav a{
   color:var(--muted);
   margin:0 14px;
@@ -67,49 +55,51 @@ nav a:hover{color:var(--accent)}
 section{
   max-width:1100px;
   margin:auto;
-  padding:80px 20px;
+  padding:90px 20px;
+  position:relative;
+  z-index:1;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero{
+  min-height:100vh;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  min-height:100vh;
-  position:relative;
   overflow:hidden;
-  background:
-    radial-gradient(circle at top left, rgba(56,189,248,.12), transparent 40%),
-    radial-gradient(circle at bottom right, rgba(99,102,241,.12), transparent 40%);
 }
+
 .hero-left{max-width:520px}
+
 .hero-left h1{font-size:40px;margin:0}
 .hero-left h2{
   font-size:56px;
-  margin:10px 0;
+  margin:12px 0;
   color:var(--accent);
-  font-weight:800;
 }
+
 .tagline{
   font-size:22px;
-  min-height:30px;
-  color:var(--accent);
-  font-weight:500;
+  min-height:32px;
+  color:#eaeaea;
 }
-.desc{color:var(--muted);margin:22px 0}
+
+.desc{color:var(--muted);margin:24px 0}
 
 .buttons a{
   display:inline-block;
-  margin:14px 10px 0 0;
   padding:12px 22px;
+  margin-right:12px;
   border-radius:10px;
   text-decoration:none;
   font-weight:600;
 }
+
 .btn-primary{
   background:linear-gradient(135deg,#38bdf8,#6366f1);
   color:#000;
 }
+
 .btn-outline{
   border:1px solid var(--accent);
   color:var(--accent);
@@ -125,11 +115,11 @@ section{
 .photo-ring::before{
   content:"";
   position:absolute;
-  inset:-6px;
+  inset:-8px;
   border-radius:50%;
-  background:linear-gradient(120deg,#38bdf8,#6366f1,#22d3ee);
-  filter:blur(8px);
-  animation:spin 6s linear infinite;
+  background:linear-gradient(120deg,#ffffff,#8fd3f4,#ffffff);
+  filter:blur(12px);
+  animation:spin 8s linear infinite;
   z-index:-1;
 }
 .photo-ring img{
@@ -143,120 +133,89 @@ section{
 .bubble{
   position:absolute;
   border-radius:50%;
-  background:rgba(56,189,248,.25);
-  animation:float 8s ease-in-out infinite;
+  background:rgba(255,255,255,.35);
+  animation:float 10s ease-in-out infinite;
 }
 .b1{width:80px;height:80px;top:20%;left:45%}
 .b2{width:40px;height:40px;bottom:25%;left:55%;animation-delay:2s}
 .b3{width:60px;height:60px;top:55%;left:40%;animation-delay:4s}
 @keyframes float{
   0%{transform:translateY(0)}
-  50%{transform:translateY(-30px)}
+  50%{transform:translateY(-40px)}
   100%{transform:translateY(0)}
 }
 
 /* CARDS */
 .card{
-  background:var(--card);
-  border:1px solid var(--border);
+  background:rgba(20,20,28,.9);
+  border:1px solid rgba(201,162,77,.25);
   border-radius:18px;
-  padding:26px;
-  margin-bottom:26px;
+  padding:28px;
+  margin-bottom:30px;
 }
-h2{font-size:30px}
+
+h2{text-align:center;font-size:32px;color:var(--accent)}
 h3{color:var(--accent)}
+
+.skill-bar{
+  background:#2a2f45;
+  border-radius:10px;
+  overflow:hidden;
+  height:8px;
+  margin-bottom:18px;
+}
+.skill-bar div{
+  height:100%;
+  background:linear-gradient(90deg,#38bdf8,#6366f1);
+}
+
 footer{
   text-align:center;
   padding:30px;
   color:var(--muted);
   border-top:1px solid var(--border);
 }
-  .skill-bar {
-  .skill-bar {
-  background: #2a2f45;
-}
-  border-radius:10px;
-  overflow:hidden;
-  height:8px;
-  margin-bottom:18px;
-}
 
-.skill-bar div {
-  height:100%;
-  background:linear-gradient(90deg,#38bdf8,#6366f1);
-  border-radius:10px;
+/* PARTICLES (UPSIDE DOWN) */
+.particles{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
 }
-/* ===== ABOUT SECTION FIX ===== */
-#about {
-  background: #111827;
+.particle{
+  position:absolute;
+  background:rgba(255,255,255,.8);
+  border-radius:50%;
+  filter:blur(.6px);
+  animation:fall linear infinite;
 }
-
-#about h2 {
-  color: #c9a24d;
-}
-
-#about p {
-  color: #e5e7eb;
-  font-size: 17px;
-  line-height: 1.8;
-  max-width: 900px;
-  margin: 0 auto 16px;
-}
-/* ===== UPSIDE DOWN PARTICLES ===== */
-.particles {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.particle {
-  position: absolute;
-  background: rgba(255,255,255,0.8);
-  border-radius: 50%;
-  animation: floatParticle linear infinite;
-  filter: blur(0.5px);
-}
-
-@keyframes floatParticle {
-  from {
-    transform: translateY(-10vh);
-    opacity: 0;
-  }
-  10% { opacity: 1; }
-  to {
-    transform: translateY(110vh);
-    opacity: 0;
-  }
-}
-  nav, .hero, section, footer {
-  position: relative;
-  z-index: 1;
+@keyframes fall{
+  from{transform:translateY(-10vh);opacity:0}
+  10%{opacity:1}
+  to{transform:translateY(110vh);opacity:0}
 }
 </style>
 </head>
+
 <body>
-  
-  <div class="particles"></div>
-  
+
+<div class="particles"></div>
+
 <nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
 </nav>
+
 <section id="home" class="hero">
   <div class="hero-left">
     <h1>Hi, I'm</h1>
     <h2>Divyanshu Negi</h2>
     <p class="tagline"><span id="typing-text"></span></p>
-    <p class="desc">Turning data into strategic decisions — <strong>one insight at a time</strong>.
-</p>
+    <p class="desc">Turning data into strategic decisions — <strong>one insight at a time</strong>.</p>
     <div class="buttons">
       <a class="btn-primary" href="#projects">View My Work</a>
       <a class="btn-outline" href="#contact">Get In Touch</a>
@@ -273,113 +232,61 @@ footer{
 </section>
 
 <section id="about">
-  <h2 style="text-align:center;">About Me</h2>
-
-  <div class="card" style="max-width:800px; margin:40px auto; text-align:center;">
-
-    <p>
-      I’m <strong>Divyanshu Negi</strong>, a passionate data analyst eager to turn raw data into meaningful insights.
-    </p>
-
-    <p>
-      My journey began with curiosity — I’ve always been drawn to finding patterns, solving problems, and understanding the
-      <em>“why”</em> behind numbers. This curiosity led me to explore tools like
-      <strong>Excel, SQL, Python, and Power BI</strong>, where I learned to clean, analyze, and visualize data effectively.
-    </p>
-
-    <p>
-      Through personal and academic projects, I’ve developed a strong foundation in
-      <strong>data storytelling, dashboard creation, and data-driven decision-making</strong>.
-      I enjoy transforming messy datasets into clear visual insights that make sense to everyone.
-    </p>
-
-    <p>
-      I may be at the start of my professional journey, but my passion for data and continuous learning keeps me moving forward —
-      <strong>turning information into impact, one dataset at a time.</strong>
-    </p>
-
+  <h2>About Me</h2>
+  <div class="card" style="max-width:850px;margin:auto;text-align:center">
+    <p>I’m <strong>Divyanshu Negi</strong>, a passionate data analyst eager to turn raw data into meaningful insights.</p>
+    <p>Driven by curiosity, I enjoy uncovering patterns, solving problems, and understanding the “why” behind numbers.</p>
+    <p>Through projects, I’ve built strong foundations in data storytelling and dashboard creation.</p>
+    <p><strong>Turning information into impact — one dataset at a time.</strong></p>
   </div>
 </section>
 
 <section id="skills">
-  <h2 style="text-align:center;">Skills & Expertise</h2>
-  <p style="text-align:center; color:var(--muted); margin-bottom:50px;">
-    Technologies and tools I work with as a Data Analyst
-  </p>
+  <h2>Skills & Expertise</h2>
+  <p style="text-align:center;color:var(--muted)">Technologies and tools I work with</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px">
 
-  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px;">
-
-    <!-- Data Visualization & Analysis -->
     <div class="card">
-      <h3 style="text-align:center;">Data Visualization & Analysis</h3>
-
-      <p>Power BI <span style="float:right;">90%</span></p>
-      <div class="skill-bar"><div style="width:90%"></div></div>
-
-      <p>Tableau <span style="float:right;">85%</span></p>
-      <div class="skill-bar"><div style="width:85%"></div></div>
-
-      <p>Excel <span style="float:right;">95%</span></p>
-      <div class="skill-bar"><div style="width:95%"></div></div>
-
-      <p>Matplotlib (Python) <span style="float:right;">80%</span></p>
-      <div class="skill-bar"><div style="width:80%"></div></div>
+      <h3>Data Visualization & Analysis</h3>
+      <p>Power BI</p><div class="skill-bar"><div style="width:90%"></div></div>
+      <p>Tableau</p><div class="skill-bar"><div style="width:85%"></div></div>
+      <p>Excel</p><div class="skill-bar"><div style="width:95%"></div></div>
+      <p>Matplotlib</p><div class="skill-bar"><div style="width:80%"></div></div>
     </div>
 
-    <!-- Data Cleaning & Processing -->
     <div class="card">
-      <h3 style="text-align:center;">Data Cleaning & Processing</h3>
-
-      <p>Python (Pandas, NumPy) <span style="float:right;">90%</span></p>
-      <div class="skill-bar"><div style="width:90%"></div></div>
-
-      <p>SQL (Joins, Aggregations) <span style="float:right;">85%</span></p>
-      <div class="skill-bar"><div style="width:85%"></div></div>
-
-      <p>Data Cleaning & Preprocessing <span style="float:right;">90%</span></p>
-      <div class="skill-bar"><div style="width:90%"></div></div>
-
-      <p>EDA (Exploratory Analysis) <span style="float:right;">85%</span></p>
-      <div class="skill-bar"><div style="width:85%"></div></div>
+      <h3>Data Cleaning & Processing</h3>
+      <p>Python (Pandas)</p><div class="skill-bar"><div style="width:90%"></div></div>
+      <p>SQL</p><div class="skill-bar"><div style="width:85%"></div></div>
+      <p>EDA</p><div class="skill-bar"><div style="width:85%"></div></div>
     </div>
 
-    <!-- Tools & Others -->
     <div class="card">
-      <h3 style="text-align:center;">Tools & Others</h3>
-
-      <p>Google Sheets <span style="float:right;">90%</span></p>
-      <div class="skill-bar"><div style="width:90%"></div></div>
-
-      <p>Git & GitHub <span style="float:right;">85%</span></p>
-      <div class="skill-bar"><div style="width:85%"></div></div>
-
-      <p>CSV / Excel Handling <span style="float:right;">95%</span></p>
-      <div class="skill-bar"><div style="width:95%"></div></div>
-
-      <p>Dashboard Design <span style="float:right;">88%</span></p>
-      <div class="skill-bar"><div style="width:88%"></div></div>
+      <h3>Tools & Others</h3>
+      <p>Google Sheets</p><div class="skill-bar"><div style="width:90%"></div></div>
+      <p>Git & GitHub</p><div class="skill-bar"><div style="width:85%"></div></div>
+      <p>Dashboard Design</p><div class="skill-bar"><div style="width:88%"></div></div>
     </div>
 
   </div>
 </section>
 
 <section id="projects">
-<h2>Projects</h2>
-<div class="card">
-<h3>IPL Data Analysis</h3>
-<p>Python-based analysis of IPL datasets with visual insights.</p>
-<a href="https://github.com/divyanshunegi-data-analytics/IPL-Data-Analysis" target="_blank">View GitHub</a>
-</div>
+  <h2>Projects</h2>
+  <div class="card">
+    <h3>IPL Data Analysis</h3>
+    <p>Python-based analysis of IPL datasets.</p>
+    <a href="https://github.com/divyanshunegi-data-analytics/IPL-Data-Analysis" target="_blank">View GitHub</a>
+  </div>
 </section>
 
 <section id="contact">
-<h2>Contact</h2>
-<p>Email: divyanshun598@gmail.com</p>
+  <h2>Contact</h2>
+  <p>Email: divyanshun598@gmail.com</p>
 </section>
 
 <footer>© 2026 Divyanshu Negi</footer>
 
-<!-- TYPING EFFECT -->
 <script>
 const roles=["Data Analyst","Critical Thinking"];
 let r=0,c=0,del=false;
@@ -398,23 +305,20 @@ function loop(){
 }
 document.addEventListener("DOMContentLoaded",loop);
 </script>
+
 <script>
-  const particleContainer = document.querySelector(".particles");
-
-  for (let i = 0; i < 50; i++) {
-    const p = document.createElement("span");
-    p.classList.add("particle");
-
-    const size = Math.random() * 4 + 2;
-    p.style.width = size + "px";
-    p.style.height = size + "px";
-
-    p.style.left = Math.random() * 100 + "vw";
-    p.style.animationDuration = Math.random() * 15 + 10 + "s";
-    p.style.animationDelay = Math.random() * 10 + "s";
-
-    particleContainer.appendChild(p);
-  }
+const container=document.querySelector(".particles");
+for(let i=0;i<60;i++){
+  const p=document.createElement("span");
+  p.className="particle";
+  const size=Math.random()*4+2;
+  p.style.width=size+"px";
+  p.style.height=size+"px";
+  p.style.left=Math.random()*100+"vw";
+  p.style.animationDuration=Math.random()*15+10+"s";
+  p.style.animationDelay=Math.random()*10+"s";
+  container.appendChild(p);
+}
 </script>
 
 </body>
