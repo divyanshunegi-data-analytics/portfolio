@@ -164,9 +164,12 @@ h3{color:var(--accent)}
   height:8px;
   margin-bottom:18px;
 }
-.skill-bar div{
-  height:100%;
-  background:linear-gradient(90deg,#38bdf8,#6366f1);
+.skill-progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  border-radius: 10px;
+  transition: width 1.8s ease-in-out;
 }
 
 footer{
@@ -407,5 +410,23 @@ for(let i=0;i<60;i++){
 
   bars.forEach(bar => observer.observe(bar));
 </script>
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const bars = entry.target.querySelectorAll(".skill-progress");
+      bars.forEach(bar => {
+        const percent = bar.getAttribute("data-percent");
+        bar.style.width = percent + "%";
+      });
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+const skillsSection = document.querySelector("#skills");
+if (skillsSection) observer.observe(skillsSection);
+</script>
+
 </body>
 </html>
