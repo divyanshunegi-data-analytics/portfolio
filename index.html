@@ -207,6 +207,11 @@ footer{
   border-radius: 10px;
   transition: width 1.8s ease-in-out;
 }  
+.skill-percent {
+  float: right;
+  font-weight: 600;
+  color: var(--muted);
+}
 </style>
 </head>
 
@@ -299,25 +304,24 @@ footer{
 
     <div class="card">
       <h3>Data Visualization & Analysis</h3>
-      <p>Power BI</p><div class="skill-bar"><div class="skill-progress" data-percent="90"></div> </div>
-      <p>Tableau</p><div class="skill-bar"><div class="skill-progress" data-percent="95"></div></div>
-      <p>Excel</p><div class="skill-bar"><div class="skill-progress" data-percent="90"></div></div>
-      <p>Matplotlib</p><div class="skill-bar"><div class="skill-progress" data-percent="95"></div></div>
+      <p>Power BI <span class="skill-percent" data-percent="90">0%</span></p>
+      <p>Tableau <span class="skill-percent" data-percent="90">0%</span></p>
+      <p>Excel <span class="skill-percent" data-percent="95">0%</span></p>
+      <p>Matplotlib <span class="skill-percent" data-percent="85">0%</span></p>
     </div>
 
     <div class="card">
       <h3>Data Cleaning & Processing</h3>
-      <p>Python (Pandas)</p><div class="skill-bar"><div class="skill-progress" data-percent="85"></div></div>
-      <p>SQL</p><div class="skill-bar"><div class="skill-progress" data-percent="85"></div></div>
-      <p>EDA</p><div class="skill-bar"><div class="skill-progress" data-percent="90"></div></div>
+      <p>Python (Pandas) <span class="skill-percent" data-percent="85">0%</span></p>
+      <p>SQL <span class="skill-percent" data-percent="90">0%</span></p>
+      <p>EDA <span class="skill-percent" data-percent="90">0%</span></p>
     </div>
 
     <div class="card">
       <h3>Tools & Others</h3>
-      <p>Google Sheets</p><div class="skill-bar"><div class="skill-progress" data-percent="95"></div></div>
-      <p>Git & GitHub</p><div class="skill-bar"><div class="skill-progress" data-percent="85"></div></div>
-      <p>Dashboard Design</p><div class="skill-bar"><div class="skill-progress" data-percent="90"></div></div>
-
+      <p>Google Sheets <span class="skill-percent" data-percent="95">0%</span></p>
+      <p>Git & GitHub <span class="skill-percent" data-percent="90">0%</span></p>
+      <p>Dashboard Design <span class="skill-percent" data-percent="95">0%</span></p>
     </div>
 
   </div>
@@ -372,19 +376,36 @@ for(let i=0;i<60;i++){
   container.appendChild(p);
 }
 </script>
-<script>
-  const skillBars = document.querySelectorAll(".skill-progress");
+  <script>
+  const bars = document.querySelectorAll(".skill-progress");
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const percent = entry.target.getAttribute("data-percent");
-        entry.target.style.width = percent + "%";
+        const bar = entry.target;
+        const percent = parseInt(bar.dataset.percent);
+        bar.style.width = percent + "%";
+
+        const percentEl =
+          bar.parentElement.previousElementSibling.querySelector(".skill-percent");
+
+        let count = 0;
+        const interval = setInterval(() => {
+          if (count >= percent) {
+            percentEl.textContent = percent + "%";
+            clearInterval(interval);
+          } else {
+            count++;
+            percentEl.textContent = count + "%";
+          }
+        }, 15);
+
+        observer.unobserve(bar); // run only once
       }
     });
   }, { threshold: 0.4 });
 
-  skillBars.forEach(bar => observer.observe(bar));
+  bars.forEach(bar => observer.observe(bar));
 </script>
 </body>
 </html>
