@@ -7,8 +7,6 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter&display=swap" rel="stylesheet">
 
-<meta name="description" content="Divyanshu Negi - Data Analyst Intern skilled in Python, SQL, Power BI, Tableau, Excel.">
-
 <style>
 :root{
   --bg:#0a0a0f;
@@ -66,24 +64,12 @@ section{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  overflow:hidden;
 }
-
-.hero-left{max-width:520px}
 
 .hero-left h1{font-size:40px;margin:0}
-.hero-left h2{
-  font-size:56px;
-  margin:12px 0;
-  color:var(--accent);
-}
+.hero-left h2{font-size:56px;color:var(--accent)}
 
-.tagline{
-  font-size:22px;
-  min-height:32px;
-  color:#eaeaea;
-}
-
+.tagline{font-size:22px;min-height:32px}
 .desc{color:var(--muted);margin:24px 0}
 
 .buttons a{
@@ -99,7 +85,6 @@ section{
   background:linear-gradient(135deg,#38bdf8,#6366f1);
   color:#000;
 }
-
 .btn-outline{
   border:1px solid var(--accent);
   color:var(--accent);
@@ -117,7 +102,7 @@ section{
   position:absolute;
   inset:-8px;
   border-radius:50%;
-  background:linear-gradient(120deg,#ffffff,#8fd3f4,#ffffff);
+  background:linear-gradient(120deg,#fff,#8fd3f4,#fff);
   filter:blur(12px);
   animation:spin 8s linear infinite;
   z-index:-1;
@@ -129,47 +114,42 @@ section{
 }
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* BUBBLES */
-.bubble{
-  position:absolute;
-  border-radius:50%;
-  background:rgba(255,255,255,.35);
-  animation:float 10s ease-in-out infinite;
-}
-.b1{width:80px;height:80px;top:20%;left:45%}
-.b2{width:40px;height:40px;bottom:25%;left:55%;animation-delay:2s}
-.b3{width:60px;height:60px;top:55%;left:40%;animation-delay:4s}
-@keyframes float{
-  0%{transform:translateY(0)}
-  50%{transform:translateY(-40px)}
-  100%{transform:translateY(0)}
-}
-
-/* CARDS */
+/* SKILLS */
 .card{
   background:rgba(20,20,28,.9);
   border:1px solid rgba(201,162,77,.25);
   border-radius:18px;
   padding:28px;
-  margin-bottom:30px;
 }
 
-h2{text-align:center;font-size:32px;color:var(--accent)}
-h3{color:var(--accent)}
+.skill-row{
+  margin-bottom:18px;
+}
+
+.skill-row p{
+  display:flex;
+  justify-content:space-between;
+  margin:0 0 6px;
+}
 
 .skill-bar{
   background:#2a2f45;
   border-radius:10px;
   overflow:hidden;
   height:8px;
-  margin-bottom:18px;
 }
-.skill-progress {
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg, #38bdf8, #6366f1);
-  border-radius: 10px;
-  transition: width 1.8s ease-in-out;
+
+.skill-progress{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#38bdf8,#6366f1);
+  border-radius:10px;
+  transition:width 2s ease;
+}
+
+.percent{
+  font-weight:600;
+  color:var(--muted);
 }
 
 footer{
@@ -179,7 +159,7 @@ footer{
   border-top:1px solid var(--border);
 }
 
-/* PARTICLES (UPSIDE DOWN) */
+/* PARTICLES */
 .particles{
   position:fixed;
   inset:0;
@@ -190,30 +170,12 @@ footer{
   position:absolute;
   background:rgba(255,255,255,.8);
   border-radius:50%;
-  filter:blur(.6px);
   animation:fall linear infinite;
 }
 @keyframes fall{
   from{transform:translateY(-10vh);opacity:0}
   10%{opacity:1}
   to{transform:translateY(110vh);opacity:0}
-}
-  /* optional cinematic glow for tagline */
-.desc {
-  letter-spacing: 0.5px;
-  text-shadow: 0 0 8px rgba(255,255,255,0.15);
-}
-.skill-progress {
-  width: 0;
-  height: 100%;
-  background: linear-gradient(90deg,#38bdf8,#6366f1);
-  border-radius: 10px;
-  transition: width 1.8s ease-in-out;
-}  
-.skill-percent {
-  float: right;
-  font-weight: 600;
-  color: var(--muted);
 }
 </style>
 </head>
@@ -243,126 +205,101 @@ footer{
   </div>
 
   <div class="photo-ring">
-    <img src="profile-photo (1).jpg" alt="Divyanshu Negi">
-  </div>
-
-  <span class="bubble b1"></span>
-  <span class="bubble b2"></span>
-  <span class="bubble b3"></span>
-</section>
-
-<section id="about">
-  <h2 style="text-align:center;">About Me</h2>
-  <p style="text-align:center; color:var(--muted); margin-bottom:60px;">
-    Get to know more about who I am and what I do
-  </p>
-
-  <div style="
-    display:flex;
-    gap:60px;
-    align-items:center;
-    flex-wrap:wrap;
-  ">
-
-    <!-- LEFT : MY STORY -->
-    <div style="flex:1; min-width:280px;">
-      <h3 style="margin-bottom:20px;">My Story</h3>
-
-      <p>
-        I’m <strong>Divyanshu Negi</strong>, a passionate data analyst eager to turn raw data into meaningful insights.
-      </p>
-
-      <p>
-        My journey began with curiosity — I’ve always been drawn to finding patterns, solving problems, and understanding
-        the <em>“why”</em> behind numbers. This curiosity led me to explore tools like
-        <strong>Excel, SQL, Python, and Power BI</strong>, where I learned to clean, analyze, and visualize data effectively.
-      </p>
-
-      <p>
-        Through personal and academic projects, I’ve developed a strong foundation in
-        <strong>data storytelling, dashboard creation, and data-driven decision-making</strong>.
-        I enjoy transforming messy datasets into clear visual insights that make sense to everyone.
-      </p>
-
-      <p>
-        I may be at the start of my professional journey, but my passion for data and continuous learning keeps me moving forward —
-        <strong>turning information into impact, one dataset at a time.</strong>
-      </p>
-    </div>
-
-    <!-- RIGHT : PHOTO -->
-    <div style="flex:1; text-align:center; min-width:260px;">
-      <div class="photo-ring" style="margin:auto;">
-        <img src="profile-photo (1).jpg" alt="Divyanshu Negi">
-      </div>
-    </div>
-
+    <img src="profile-photo (1).jpg">
   </div>
 </section>
 
 <section id="skills">
-  <h2>Skills & Expertise</h2>
-  <p style="text-align:center;color:var(--muted)">Technologies and tools I work with</p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px">
+<h2>Skills & Expertise</h2>
+<p style="text-align:center;color:var(--muted)">Technologies and tools I work with</p>
 
-    <div class="card">
-      <h3>Data Visualization & Analysis</h3>
-      <p>Power BI <span class="percent" data-percent="90">0%</span></p>
-      <p>Tableau <span class="percent" data-percent="85">0%</span></p>
-      <p>Excel <span class="percent" data-percent="95">0%</span></p>
-      <p>Matplotlib <span class="percent" data-percent="85">0%</span></p>
-    </div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px">
 
-    <div class="card">
-      <h3>Data Cleaning & Processing</h3>
-      <p>Python (Pandas) <span class="skill-percent" data-percent="85">0%</span></p>
-      <p>SQL <span class="percent" data-percent="90">0%</span></p>
-      <p>EDA <span class="percent" data-percent="90">0%</span></p>
-    </div>
+<div class="card">
+<h3>Data Visualization & Analysis</h3>
 
-    <div class="card">
-      <h3>Tools & Others</h3>
-      <p>Google Sheets <span class="percent" data-percent="95">0%</span></p>
-      <p>Git & GitHub <span class="percent" data-percent="90">0%</span></p>
-      <p>Dashboard Design <span class="percent" data-percent="95">0%</span></p>
-    </div>
+<div class="skill-row">
+<p>Power BI <span class="percent" data-percent="90">0%</span></p>
+<div class="skill-bar"><div class="skill-progress" data-percent="90"></div></div>
+</div>
 
-  </div>
-</section>
+<div class="skill-row">
+<p>Tableau <span class="percent" data-percent="85">0%</span></p>
+<div class="skill-bar"><div class="skill-progress" data-percent="85"></div></div>
+</div>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="card">
-    <h3>IPL Data Analysis</h3>
-    <p>Python-based analysis of IPL datasets.</p>
-    <a href="https://github.com/divyanshunegi-data-analytics/IPL-Data-Analysis" target="_blank">View GitHub</a>
-  </div>
-</section>
+<div class="skill-row">
+<p>Excel <span class="percent" data-percent="95">0%</span></p>
+<div class="skill-bar"><div class="skill-progress" data-percent="95"></div></div>
+</div>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: divyanshun598@gmail.com</p>
+</div>
+
+<div class="card">
+<h3>Data Cleaning & Processing</h3>
+
+<div class="skill-row">
+<p>Python <span class="percent" data-percent="90">0%</span></p>
+<div class="skill-bar"><div class="skill-progress" data-percent="90"></div></div>
+</div>
+
+<div class="skill-row">
+<p>SQL <span class="percent" data-percent="85">0%</span></p>
+<div class="skill-bar"><div class="skill-progress" data-percent="85"></div></div>
+</div>
+
+</div>
+
+<div class="card">
+<h3>Tools & Others</h3>
+
+<div class="skill-row">
+<p>Google Sheets <span class="percent" data-percent="95">0%</span></p>
+<div class="skill-bar"><div class="skill-progress" data-percent="95"></div></div>
+</div>
+
+<div class="skill-row">
+<p>Git & GitHub <span class="percent" data-percent="90">0%</span></p>
+<div class="skill-bar"><div class="skill-progress" data-percent="90"></div></div>
+</div>
+
+</div>
+
+</div>
 </section>
 
 <footer>© 2026 Divyanshu Negi</footer>
 
+<!-- SKILL ANIMATION -->
 <script>
-const roles=["Data Analyst","Critical Thinking"];
-let r=0,c=0,del=false;
-function loop(){
-  const el=document.getElementById("typing-text");
-  if(!el)return;
-  const word=roles[r];
-  if(!del){
-    el.textContent=word.slice(0,++c);
-    if(c===word.length)setTimeout(()=>del=true,1200);
-  }else{
-    el.textContent=word.slice(0,--c);
-    if(c===0){del=false;r=(r+1)%roles.length;}
-  }
-  setTimeout(loop,del?70:120);
-}
-document.addEventListener("DOMContentLoaded",loop);
+const skillsSection = document.querySelector("#skills");
+const bars = document.querySelectorAll(".skill-progress");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      bars.forEach(bar=>{
+        const target = +bar.dataset.percent;
+        bar.style.width = target + "%";
+
+        const percentEl = bar.parentElement.previousElementSibling.querySelector(".percent");
+        let count = 0;
+        const timer = setInterval(()=>{
+          if(count>=target){
+            percentEl.textContent = target+"%";
+            clearInterval(timer);
+          }else{
+            count++;
+            percentEl.textContent = count+"%";
+          }
+        },20);
+      });
+      observer.unobserve(skillsSection);
+    }
+  });
+},{threshold:0.3});
+
+observer.observe(skillsSection);
 </script>
 
 <script>
@@ -379,79 +316,19 @@ for(let i=0;i<60;i++){
   container.appendChild(p);
 }
 </script>
-  <script>
-  const bars = document.querySelectorAll(".skill-progress");
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const bar = entry.target;
-        const percent = parseInt(bar.dataset.percent);
-        bar.style.width = percent + "%";
-
-        const percentEl =
-          bar.parentElement.previousElementSibling.querySelector(".skill-percent");
-
-        let count = 0;
-        const interval = setInterval(() => {
-          if (count >= percent) {
-            percentEl.textContent = percent + "%";
-            clearInterval(interval);
-          } else {
-            count++;
-            percentEl.textContent = count + "%";
-          }
-        }, 15);
-
-        observer.unobserve(bar); // run only once
-      }
-    });
-  }, { threshold: 0.4 });
-
-  bars.forEach(bar => observer.observe(bar));
-</script>
 <script>
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const bars = entry.target.querySelectorAll(".skill-progress");
-      bars.forEach(bar => {
-        const percent = bar.getAttribute("data-percent");
-        bar.style.width = percent + "%";
-      });
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.3 });
-
-const skillsSection = document.querySelector("#skills");
-if (skillsSection) observer.observe(skillsSection);
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const bars = document.querySelectorAll(".skill-progress");
-  const percents = document.querySelectorAll(".percent");
-
-  bars.forEach(bar => {
-    const target = +bar.dataset.percent;
-    bar.style.width = target + "%";
-  });
-
-  percents.forEach(el => {
-    const target = +el.dataset.percent;
-    let count = 0;
-
-    const interval = setInterval(() => {
-      if (count >= target) {
-        clearInterval(interval);
-        el.textContent = target + "%";
-      } else {
-        count++;
-        el.textContent = count + "%";
-      }
-    }, 20);
-  });
-});
+const roles=["Data Analyst","Critical Thinking"];
+let r=0,c=0,del=false;
+(function loop(){
+  const el=document.getElementById("typing-text");
+  if(!el)return;
+  const word=roles[r];
+  el.textContent = del ? word.slice(0,--c) : word.slice(0,++c);
+  if(c===word.length) del=true;
+  if(c===0){del=false;r=(r+1)%roles.length;}
+  setTimeout(loop,del?70:120);
+})();
 </script>
 
 </body>
