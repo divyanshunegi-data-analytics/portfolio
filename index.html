@@ -307,24 +307,24 @@ footer{
 
     <div class="card">
       <h3>Data Visualization & Analysis</h3>
-      <p>Power BI <span class="skill-percent" data-percent="90">0%</span></p>
-      <p>Tableau <span class="skill-percent" data-percent="90">0%</span></p>
-      <p>Excel <span class="skill-percent" data-percent="95">0%</span></p>
-      <p>Matplotlib <span class="skill-percent" data-percent="85">0%</span></p>
+      <p>Power BI <span class="percent" data-percent="90">0%</span></p>
+      <p>Tableau <span class="percent" data-percent="85">0%</span></p>
+      <p>Excel <span class="percent" data-percent="95">0%</span></p>
+      <p>Matplotlib <span class="percent" data-percent="85">0%</span></p>
     </div>
 
     <div class="card">
       <h3>Data Cleaning & Processing</h3>
       <p>Python (Pandas) <span class="skill-percent" data-percent="85">0%</span></p>
-      <p>SQL <span class="skill-percent" data-percent="90">0%</span></p>
-      <p>EDA <span class="skill-percent" data-percent="90">0%</span></p>
+      <p>SQL <span class="percent" data-percent="90">0%</span></p>
+      <p>EDA <span class="percent" data-percent="90">0%</span></p>
     </div>
 
     <div class="card">
       <h3>Tools & Others</h3>
-      <p>Google Sheets <span class="skill-percent" data-percent="95">0%</span></p>
-      <p>Git & GitHub <span class="skill-percent" data-percent="90">0%</span></p>
-      <p>Dashboard Design <span class="skill-percent" data-percent="95">0%</span></p>
+      <p>Google Sheets <span class="percent" data-percent="95">0%</span></p>
+      <p>Git & GitHub <span class="percent" data-percent="90">0%</span></p>
+      <p>Dashboard Design <span class="percent" data-percent="95">0%</span></p>
     </div>
 
   </div>
@@ -426,6 +426,32 @@ const observer = new IntersectionObserver(entries => {
 
 const skillsSection = document.querySelector("#skills");
 if (skillsSection) observer.observe(skillsSection);
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const bars = document.querySelectorAll(".skill-progress");
+  const percents = document.querySelectorAll(".percent");
+
+  bars.forEach(bar => {
+    const target = +bar.dataset.percent;
+    bar.style.width = target + "%";
+  });
+
+  percents.forEach(el => {
+    const target = +el.dataset.percent;
+    let count = 0;
+
+    const interval = setInterval(() => {
+      if (count >= target) {
+        clearInterval(interval);
+        el.textContent = target + "%";
+      } else {
+        count++;
+        el.textContent = count + "%";
+      }
+    }, 20);
+  });
+});
 </script>
 
 </body>
