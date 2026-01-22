@@ -1,455 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divyanshu Negi - Data Analyst</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Divyanshu Negi | Data Analyst</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#0ea5e9;
+  --dark:#0f172a;
+  --text:#1e293b;
+  --muted:#64748b;
+  --bg:#ffffff;
+  --card:#f8fafc;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* NAVBAR */
+nav{
+  position:sticky;
+  top:0;
+  background:linear-gradient(90deg,#0f172a,#020617);
+  padding:16px 0;
+  z-index:10;
+}
+.nav-container{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 20px;
+}
+.logo{
+  color:#38bdf8;
+  font-weight:700;
+  font-size:22px;
+}
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:28px;
+}
+nav a{
+  color:#e5e7eb;
+  text-decoration:none;
+  font-weight:500;
+}
+nav a:hover{color:#38bdf8}
+
+/* SECTIONS */
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:90px 20px;
+}
+
+/* HERO */
+.hero{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  align-items:center;
+  gap:50px;
+}
+.hero h1{
+  font-size:42px;
+  font-weight:700;
+}
+.hero h1 span{color:#0ea5e9}
+.hero p.role{
+  font-size:22px;
+  margin:16px 0;
+  color:#0ea5e9;
+  min-height:28px;
+}
+.hero p.desc{
+  color:var(--muted);
+  margin-bottom:28px;
+}
+.hero .buttons a{
+  display:inline-block;
+  padding:12px 22px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  margin-right:12px;
+}
+.btn-primary{
+  background:#0ea5e9;
+  color:white;
+}
+.btn-outline{
+  border:2px solid #0ea5e9;
+  color:#0ea5e9;
+}
+.hero img{
+  width:100%;
+  max-width:320px;
+  border-radius:50%;
+  box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+
+/* SECTION HEAD */
+.section-head{
+  text-align:center;
+  margin-bottom:60px;
+}
+.section-head h2{
+  font-size:34px;
+}
+.section-head p{
+  color:var(--muted);
+  margin-top:10px;
+}
+
+/* ABOUT */
+.about-grid{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+.about-card{
+  background:var(--card);
+  padding:32px;
+  border-radius:16px;
+}
+.about-card h3{
+  margin-bottom:16px;
+}
+.about-card p{
+  color:var(--muted);
+  margin-bottom:14px;
+}
+
+/* SKILLS */
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+.skill-card{
+  background:var(--card);
+  padding:28px;
+  border-radius:16px;
+}
+.skill-card h3{
+  margin-bottom:22px;
+}
+.skill{
+  margin-bottom:18px;
+}
+.skill-label{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:6px;
+  font-weight:500;
+}
+.bar{
+  height:8px;
+  background:#e5e7eb;
+  border-radius:10px;
+  overflow:hidden;
+}
+.bar span{
+  display:block;
+  height:100%;
+  width:0%;
+  background:#0ea5e9;
+  border-radius:10px;
+  transition:width 1.5s ease;
+}
+
+/* CONTACT */
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+.contact-card{
+  background:var(--card);
+  padding:28px;
+  border-radius:16px;
+}
+.contact-card p{
+  margin-bottom:10px;
+  color:var(--muted);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  color:var(--muted);
+  border-top:1px solid #e5e7eb;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero{text-align:center}
+}
+</style>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span>DN</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Hi, I'm <span class="highlight">Divyanshu Negi</span>
-                </h1>
-                <p class="hero-subtitle">
-                    <span class="typing-text" id="typing-text"></span>
-                    <span class="cursor">|</span>
-                </p>
-                <p class="hero-description">
-                    Leveraging Python, SQL, and Power BI to turn data into decisions
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn-primary">View My Work</a>
-                    <a href="#contact" class="btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="floating-elements">
-                    <div class="floating-element" style="--delay: 0s"></div>
-                    <div class="floating-element" style="--delay: 1s"></div>
-                    <div class="floating-element" style="--delay: 2s"></div>
-                </div>
-                <img src="divyanshu.jpg" alt="Divyanshu Negi" class="hero-profile-img">
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-line"></div>
-            <span>Scroll Down</span>
-        </div>
-    </section>
+<!-- NAV -->
+<nav>
+  <div class="nav-container">
+    <div class="logo">DN</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Get to know more about who I am and what I do</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <div class="about-card">
-                        <h3>My Story</h3>
-                        <p>
-                            I’m Divyanshu Negi, a passionate data analyst eager to turn raw data into meaningful
-                            insights.
-
-                        </p>
-                        <p>
-                            My journey began with curiosity — I’ve always been drawn to finding patterns, solving
-                            problems, and understanding the “why” behind numbers. This curiosity led me to explore tools
-                            like Excel, SQL, Python, and Power BI, where I learned to clean, analyze, and visualize data
-                            effectively.
-
-                        </p>
-                        <p>
-                            Through personal and academic projects, I’ve developed a strong foundation in data
-                            storytelling, dashboard creation, and data-driven decision-making. I enjoy transforming
-                            messy datasets into clear visual insights that make sense to everyone.
-
-                        </p>
-                        <p>
-                            I may be at the start of my professional journey, but my passion for data and continuous
-                            learning keeps me moving forward — turning information into impact, one dataset at a time.
-                        </p>
-                    </div>
-
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="3">0</span>
-                            <span class="stat-label">Projects Completed</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="2">0</span>
-                            <span class="stat-label">Clients & Startups Worked With</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="0">0</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="about-image">
-                    <img src="divyanshu.jpg" alt="Divyanshu Negi" class="about-profile-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Skills & Expertise</h2>
-                <p class="section-subtitle">Technologies and tools I work with as a Data Analyst</p>
-            </div>
-            <div class="skills-content">
-                <div class="skills-grid">
-                    <!-- Data Visualization & Analysis -->
-                    <div class="skill-category">
-                        <h3>Data Visualization & Analysis</h3>
-
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Power BI</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="90"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Tableau</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="85"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Excel</span>
-                                <span>95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="95"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Matplotlib (Python)</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="80"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Programming & Data Processing -->
-                    <div class="skill-category">
-                        <h3>Programming & Data Processing</h3>
-
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Python</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="90"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>SQL</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="85"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Excel / CSV</span>
-                                <span>95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="95"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Power Query</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="80"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Jupyter Notebook / VS Code</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="85"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tools & Others -->
-                    <div class="skill-category">
-                        <h3>Tools & Others</h3>
-
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Git & GitHub</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="85"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Google Sheets</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="90"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- Projects Section -->
-  <section class="projects" id="projects">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Featured Data Analysis Projects</h2>
-            <p class="section-subtitle">My work in data analysis and sales performance optimization</p>
-        </div>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="/project-img/Nike.png" alt="Nike Sales Dashboard">
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <a href="divyanshu nike sales portfolio.pdf" class="project-link" title="Live Demo">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/" class="project-link" title="Source Code">
-                                <i class="fab fa-github"></i> 
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>Nike Sales Performance Dashboard</h3>
-                    <p>A comprehensive Power BI dashboard analyzing Nike sales data. The dashboard breaks down performance by gender, sales channel, region, and product line. Key visualizations include profit trends, units sold, and the impact of discounts on overall sales. It provides actionable insights for business decision-makers.</p>
-                    <div class="project-tech">
-                        <span>Power BI</span>
-                        <span>Data Analysis</span>
-                        <span>Sales Insights</span>
-                        <span>Profit Trends</span>
-                        <span>Data Visualization</span>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-               <div class="project-image">
-                    <img src="/project-img/Nike.png" alt="Nike Sales Dashboard">
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <a href="divyanshu nike sales portfolio.pdf" class="project-link" title="Live Demo">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/" class="project-link" title="Source Code">
-                                <i class="fab fa-github"></i> 
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>Sales Trend Analysis by Region</h3>
-                    <p>This project visualizes the sales trends across multiple regions. Using Power BI, we can see how Nike's sales evolve over time in different areas like Bangalore, Delhi, and Hyderabad. This analysis helps to identify key regions for targeted marketing and sales strategies.</p>
-                    <div class="project-tech">
-                        <span>Power BI</span>
-                        <span>Sales Data</span>
-                        <span>Regional Trends</span>
-                        <span>Data Visualization</span>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="/project-img/Nike.png" alt="Nike Sales Dashboard">
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <a href="divyanshu nike sales portfolio.pdf" class="project-link" title="Live Demo">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/" class="project-link" title="Source Code">
-                                <i class="fab fa-github"></i> 
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>Impact of Discounts on Profit</h3>
-                    <p>This project analyzes how discounts applied across different sales channels (retail vs. online) affect overall profit. The insights help optimize discount strategies to maximize profit margins, especially during peak sales periods like seasonal promotions.</p>
-                    <div class="project-tech">
-                        <span>Power BI</span>
-                        <span>Discount Analysis</span>
-                        <span>Profit Optimization</span>
-                        <span>Sales Channel</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div>
+    <h1>Hi, I'm <span>Divyanshu Negi</span></h1>
+    <p class="role" id="typing"></p>
+    <p class="desc">Leveraging Python, SQL, and Power BI to turn data into decisions.</p>
+    <div class="buttons">
+      <a href="#projects" class="btn-primary">View My Work</a>
+      <a href="#contact" class="btn-outline">Get In Touch</a>
     </div>
+  </div>
+  <img src="divyanshu.jpg" alt="Divyanshu Negi">
 </section>
 
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-head">
+    <h2>About Me</h2>
+    <p>Get to know more about who I am and what I do</p>
+  </div>
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>My Story</h3>
+      <p>I’m Divyanshu Negi, a passionate data analyst eager to turn raw data into meaningful insights.</p>
+      <p>My journey began with curiosity — finding patterns, solving problems, and understanding the “why” behind numbers.</p>
+      <p>I enjoy transforming messy datasets into clear visual insights that drive decisions.</p>
+    </div>
+    <img src="divyanshu.jpg" alt="Divyanshu Negi">
+  </div>
+</section>
 
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-head">
+    <h2>Skills & Expertise</h2>
+    <p>Technologies and tools I work with</p>
+  </div>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's work together on your next project</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p>divyanshun598@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Phone</h3>
-                            <p>+91 9910779061
-</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Location</h3>
-                            <p>New Delhi, India</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <!-- Option 1: EmailJS (More customizable) -->
-                    <form id="contact-form" action="https://formspree.io" method="POST">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5"
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary">Send Message</button>
-                    </form>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h3>Data Visualization</h3>
+      <div class="skill"><div class="skill-label"><span>Power BI</span><span>90%</span></div><div class="bar"><span data="90"></span></div></div>
+      <div class="skill"><div class="skill-label"><span>Tableau</span><span>85%</span></div><div class="bar"><span data="85"></span></div></div>
+      <div class="skill"><div class="skill-label"><span>Excel</span><span>95%</span></div><div class="bar"><span data="95"></span></div></div>
+    </div>
 
-                    <!-- Option 2: Formspree (Simpler - Uncomment to use) -->
-                    <!-- 
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary">Send Message</button>
-                    </form>
-                    -->
-                </div>
-            </div>
-            <div class="social-links">
-                <a href="https://github.com/divyanshunegi-data-analytics" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/divyanshu-negi-47b2ba315/" class="social-link"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://x.com/" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/divyanshu_negi11/" class="social-link"><i
-                        class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </section>
+    <div class="skill-card">
+      <h3>Data Processing</h3>
+      <div class="skill"><div class="skill-label"><span>Python</span><span>90%</span></div><div class="bar"><span data="90"></span></div></div>
+      <div class="skill"><div class="skill-label"><span>SQL</span><span>85%</span></div><div class="bar"><span data="85"></span></div></div>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Divyanshu Negi. All rights reserved.</p>
-        </div>
-    </footer>
+<!-- PROJECTS (EMPTY) -->
+<section id="projects">
+  <div class="section-head">
+    <h2>Projects</h2>
+    <p>Coming soon</p>
+  </div>
+</section>
 
-    <script src="/js/script.js"></script>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-head">
+    <h2>Contact</h2>
+    <p>Let’s connect</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <p><strong>Email:</strong> divyanshun598@gmail.com</p>
+      <p><strong>Location:</strong> New Delhi, India</p>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Divyanshu Negi</footer>
+
+<script>
+/* typing */
+const words=["Data Analyst","Power BI Developer","SQL & Python Enthusiast"];
+let i=0,j=0,del=false;
+const el=document.getElementById("typing");
+function type(){
+  el.textContent=words[i].slice(0,j);
+  if(!del){j++;if(j>words[i].length){del=true;setTimeout(()=>{},800)}}
+  else{j--;if(j===0){del=false;i=(i+1)%words.length}}
+  setTimeout(type,del?60:120);
+}
+type();
+
+/* skill animation */
+const bars=document.querySelectorAll(".bar span");
+window.addEventListener("scroll",()=>{
+  bars.forEach(bar=>{
+    if(bar.getBoundingClientRect().top<window.innerHeight-50){
+      bar.style.width=bar.getAttribute("data")+"%";
+    }
+  });
+});
+</script>
+
 </body>
-
 </html>
