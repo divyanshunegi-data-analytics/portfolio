@@ -211,6 +211,58 @@ footer{
   .hero,.about-grid,.contact-grid{grid-template-columns:1fr}
   .hero{text-align:center}
 }
+
+ /* STEP 1: PHOTO FLOATING ANIMATION */
+.hero-profile-img {
+  animation: floatPhoto 6s ease-in-out infinite;
+}
+
+@keyframes floatPhoto {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* STEP 2: FLOATING BUBBLES */
+.floating-element {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0,216,255,0.9);
+  animation: bubbleFloat 8s ease-in-out infinite;
+}
+
+.floating-element:nth-child(1) {
+  width: 18px;
+  height: 18px;
+}
+
+.floating-element:nth-child(2) {
+  width: 12px;
+  height: 12px;
+  animation-duration: 10s;
+}
+
+.floating-element:nth-child(3) {
+  width: 8px;
+  height: 8px;
+  animation-duration: 12s;
+}
+
+@keyframes bubbleFloat {
+  0% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(-20px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.6; }
+}
+
+/* STEP 3: HERO BACKGROUND SAME AS OLD */
+.hero {
+  background: linear-gradient(
+    135deg,
+    #0b0f2a 0%,
+    #0f1c3f 50%,
+    #0b0f2a 100%
+  );
+}
 </style>
 </head>
 
@@ -242,6 +294,7 @@ footer{
     </div>
   </div>
   <img src="profile_photo.webp" alt="Divyanshu Negi">
+
 </section>
 
 <!-- ABOUT -->
