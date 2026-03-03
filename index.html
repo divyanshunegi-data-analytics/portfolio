@@ -5,9 +5,222 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divyanshu Negi - Data Analyst</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style> 
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#0b1633;
+  color:#ffffff;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:linear-gradient(90deg,#0f172a,#020617);
+  padding:18px 0;
+  z-index:1000;
+}
+
+.nav-container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.nav-logo span{
+  color:#38bdf8;
+  font-weight:700;
+  font-size:22px;
+}
+
+.nav-menu{
+  list-style:none;
+  display:flex;
+  gap:30px;
+}
+
+.nav-link{
+  text-decoration:none;
+  color:#e5e7eb;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.nav-link:hover{
+  color:#38bdf8;
+}
+
+/* HERO SECTION */
+.hero{
+  width:100vw;
+  min-height:100vh;
+  background:linear-gradient(135deg,#0b1633 0%,#0a2540 50%,#0b1633 100%);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 8%;
+  padding-top:120px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
+}
+
+.hero-content{
+  max-width:550px;
+}
+
+.hero-title{
+  font-size:52px;
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+.highlight{
+  color:#38bdf8;
+  text-shadow:0 0 15px rgba(56,189,248,0.6);
+}
+
+.hero-subtitle{
+  font-size:24px;
+  margin-bottom:20px;
+  color:#38bdf8;
+}
+
+.hero-description{
+  color:#cbd5e1;
+  margin-bottom:30px;
+  line-height:1.6;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:20px;
+}
+
+.btn-primary{
+  background:#38bdf8;
+  color:#0f172a;
+  padding:12px 24px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn-primary:hover{
+  background:#0ea5e9;
+}
+
+.btn-secondary{
+  border:2px solid #38bdf8;
+  color:#38bdf8;
+  padding:12px 24px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn-secondary:hover{
+  background:#38bdf8;
+  color:#0f172a;
+}
+
+/* PROFILE IMAGE */
+.hero-image{
+  position:relative;
+}
+
+.hero-profile-img{
+  width:360px;
+  height:360px;
+  border-radius:50%;
+  object-fit:cover;
+  border:6px solid #00e5ff;
+  box-shadow:0 0 50px rgba(0,229,255,0.6);
+  animation:floatImg 6s ease-in-out infinite;
+}
+
+@keyframes floatImg{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-15px)}
+  100%{transform:translateY(0)}
+}
+
+/* FLOATING BUBBLES */
+.floating-element{
+  position:absolute;
+  background:rgba(0,229,255,0.25);
+  border-radius:50%;
+  animation:float 8s ease-in-out infinite;
+}
+
+.floating-element:nth-child(1){
+  width:80px;
+  height:80px;
+  top:20%;
+  left:60%;
+}
+
+.floating-element:nth-child(2){
+  width:40px;
+  height:40px;
+  top:50%;
+  left:70%;
+  animation-delay:2s;
+}
+
+.floating-element:nth-child(3){
+  width:60px;
+  height:60px;
+  top:40%;
+  left:50%;
+  animation-delay:4s;
+}
+
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-25px)}
+  100%{transform:translateY(0)}
+}
+
+/* SECTIONS */
+section{
+  padding:100px 8%;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-profile-img{
+    margin-top:40px;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -358,7 +571,89 @@
         </div>
     </footer>
 
-    <script src="/js/script.js"></script>
+<script>
+
+// ==========================
+// TYPING ANIMATION
+// ==========================
+const texts = ["Data Analyst", "Power BI Developer", "SQL & Python Enthusiast"];
+let textIndex = 0;
+let charIndex = 0;
+let deleting = false;
+const typingElement = document.getElementById("typing-text");
+
+function typeEffect() {
+  if (!typingElement) return;
+
+  const currentText = texts[textIndex];
+
+  if (!deleting) {
+    typingElement.textContent = currentText.substring(0, charIndex + 1);
+    charIndex++;
+    if (charIndex === currentText.length) {
+      deleting = true;
+      setTimeout(typeEffect, 1000);
+      return;
+    }
+  } else {
+    typingElement.textContent = currentText.substring(0, charIndex - 1);
+    charIndex--;
+    if (charIndex === 0) {
+      deleting = false;
+      textIndex = (textIndex + 1) % texts.length;
+    }
+  }
+
+  setTimeout(typeEffect, deleting ? 60 : 100);
+}
+
+document.addEventListener("DOMContentLoaded", typeEffect);
+
+
+// ==========================
+// SKILL BAR ANIMATION
+// ==========================
+const skillBars = document.querySelectorAll(".skill-progress");
+
+function animateSkills() {
+  skillBars.forEach(bar => {
+    const rect = bar.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 50) {
+      const width = bar.getAttribute("data-width");
+      bar.style.width = width + "%";
+    }
+  });
+}
+
+window.addEventListener("scroll", animateSkills);
+window.addEventListener("load", animateSkills);
+
+
+// ==========================
+// ACTIVE NAV LINK ON SCROLL
+// ==========================
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    if (pageYOffset >= sectionTop - 200) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+
+</script>
 </body>
 
 </html>
