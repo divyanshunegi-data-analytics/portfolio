@@ -395,6 +395,21 @@ background:#38bdf8;
 margin:12px auto 0;
 border-radius:10px;
 }
+
+.skill-bar{
+height:8px;
+background:#e5e7eb;
+border-radius:20px;
+overflow:hidden;
+}
+
+.skill-progress{
+height:100%;
+width:0%;
+background:linear-gradient(90deg,#38bdf8,#0ea5e9);
+border-radius:20px;
+transition:width 1.8s ease;
+}
     
 </style>
 </head>
@@ -543,7 +558,7 @@ border-radius:10px;
                                 <span>85%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="85"></div>
+                                <div class="skill-progress" data-width="95"></div>
                             </div>
                         </div>
 
@@ -563,7 +578,7 @@ border-radius:10px;
                                 <span>80%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="80"></div>
+                                <div class="skill-progress" data-width="9"></div>
                             </div>
                         </div>
                     </div>
@@ -588,7 +603,7 @@ border-radius:10px;
                                 <span>85%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="85"></div>
+                                <div class="skill-progress" data-width="95"></div>
                             </div>
                         </div>
 
@@ -608,7 +623,7 @@ border-radius:10px;
                                 <span>80%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="80"></div>
+                                <div class="skill-progress" data-width="90"></div>
                             </div>
                         </div>
 
@@ -618,7 +633,7 @@ border-radius:10px;
                                 <span>85%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="85"></div>
+                                <div class="skill-progress" data-width="90"></div>
                             </div>
                         </div>
                     </div>
@@ -633,7 +648,7 @@ border-radius:10px;
                                 <span>85%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="85"></div>
+                                <div class="skill-progress" data-width="95"></div>
                             </div>
                         </div>
 
@@ -881,6 +896,32 @@ skill.style.width = width + "%";
 }
 
 window.addEventListener("scroll", showSkills);
+
+<script>
+
+const skillBars = document.querySelectorAll(".skill-progress");
+
+function animateSkills(){
+
+skillBars.forEach(bar => {
+
+const position = bar.getBoundingClientRect().top;
+
+const screenHeight = window.innerHeight;
+
+if(position < screenHeight - 100){
+
+const width = bar.getAttribute("data-width");
+
+bar.style.width = width + "%";
+
+}
+
+});
+
+}
+
+window.addEventListener("scroll", animateSkills);
 
 </script>
 
