@@ -282,39 +282,6 @@ border-bottom:2px solid #38bdf8;
   100%{transform:translateY(0)}
 }
 
-/* FLOATING BUBBLES */
-.floating-element{
-position:absolute;
-border-radius:50%;
-background:rgba(56,189,248,0.8);
-animation:floatBubble 6s ease-in-out infinite;
-box-shadow:0 0 40px rgba(56,189,248,0.9);
-filter: blur(2px);
-}
-
-.floating-element:nth-child(1){
-width:120px;
-height:120px;
-top:40%;
-left:8%;
-}
-
-.floating-element:nth-child(2){
-width:60px;
-height:60px;
-top:55%;
-left:18%;
-animation-delay:2s;
-}
-
-.floating-element:nth-child(3){
-width:80px;
-height:80px;
-top:48%;
-left:3%;
-animation-delay:4s;
-}
-
 @keyframes float{
   0%{transform:translateY(0)}
   50%{transform:translateY(-25px)}
@@ -334,9 +301,8 @@ section{
   }
 
   .hero-profile-img{
-    margin-top:40px;
+   z-index:5;
   }
-}
 
 /* ===== SKILLS SECTION ===== */
 
@@ -587,7 +553,7 @@ background:#38bdf8;
 transform:translateY(-5px);
 }
 
-/* BUBBLES VISIBILITY FIX */
+/* HERO BUBBLES */
 
 .floating-elements{
 position:absolute;
@@ -601,38 +567,37 @@ z-index:1;
 .floating-element{
 position:absolute;
 border-radius:50%;
-background:rgba(56,189,248,0.8);
+background:rgba(56,189,248,0.6);
+box-shadow:0 0 30px rgba(56,189,248,0.8);
 animation:floatBubble 6s ease-in-out infinite;
-box-shadow:0 0 40px rgba(56,189,248,0.9);
-filter:blur(2px);
 }
 
 .floating-element:nth-child(1){
-width:120px;
-height:120px;
-top:40%;
-left:8%;
+width:100px;
+height:100px;
+top:45%;
+left:10%;
 }
 
 .floating-element:nth-child(2){
 width:60px;
 height:60px;
-top:55%;
-left:18%;
+top:60%;
+left:20%;
 animation-delay:2s;
 }
 
 .floating-element:nth-child(3){
 width:80px;
 height:80px;
-top:48%;
-left:3%;
+top:35%;
+left:5%;
 animation-delay:4s;
 }
 
 @keyframes floatBubble{
 0%{transform:translateY(0)}
-50%{transform:translateY(-40px)}
+50%{transform:translateY(-30px)}
 100%{transform:translateY(0)}
 }
     
