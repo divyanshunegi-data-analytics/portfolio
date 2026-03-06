@@ -762,9 +762,7 @@ transition:width 1.8s ease;
             <p>&copy; 2026 Divyanshu Negi. All rights reserved.</p>
         </div>
     </footer>
-
-<script>
-
+    
 <script>
 
 // ==========================
@@ -835,108 +833,6 @@ window.addEventListener("scroll", animateSkills);
 window.addEventListener("load", animateSkills);
 
 </script>
-
-    
-/* ===== SKILLS ANIMATION ===== */
-
-const skillBars = document.querySelectorAll(".skill-progress");
-
-function animateSkills() {
-
-skillBars.forEach(bar => {
-
-const rect = bar.getBoundingClientRect();
-
-if(rect.top < window.innerHeight - 100){
-
-const width = bar.getAttribute("data-width");
-
-bar.style.width = width + "%";
-
-}
-
-});
-
-}
-
-window.addEventListener("scroll", animateSkills);
-
-<script>
-
-const skills = document.querySelectorAll(".skill-progress");
-
-function showSkills(){
-
-skills.forEach(skill => {
-
-const position = skill.getBoundingClientRect().top;
-
-const screenHeight = window.innerHeight;
-
-if(position < screenHeight - 100){
-
-const width = skill.getAttribute("data-width");
-
-skill.style.width = width + "%";
-
-}
-
-});
-
-}
-
-window.addEventListener("scroll", showSkills);
-
-<script>
-
-const skillBars = document.querySelectorAll(".skill-progress");
-
-function animateSkills(){
-
-skillBars.forEach(bar => {
-
-const position = bar.getBoundingClientRect().top;
-
-const screenHeight = window.innerHeight;
-
-if(position < screenHeight - 100){
-
-const width = bar.getAttribute("data-width");
-
-bar.style.width = width + "%";
-
-}
-
-});
-
-}
-
-window.addEventListener("scroll", animateSkills);
-
-<script>
-
-window.addEventListener("scroll", function(){
-
-const skills = document.querySelectorAll(".skill-progress");
-
-skills.forEach(skill => {
-
-const position = skill.getBoundingClientRect().top;
-const screenHeight = window.innerHeight;
-
-if(position < screenHeight - 50){
-
-const width = skill.getAttribute("data-width");
-skill.style.width = width + "%";
-
-}
-
-});
-
-});
-
-</script>
-
 
 </body>
 
