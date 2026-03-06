@@ -555,10 +555,10 @@ transition:width 1.8s ease;
                         <div class="skill-item">
                             <div class="skill-info">
                                 <span>Tableau</span>
-                                <span>85%</span>
+                                <span>90%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="95"></div>
+                                <div class="skill-progress" data-width="90"></div>
                             </div>
                         </div>
 
@@ -575,7 +575,7 @@ transition:width 1.8s ease;
                         <div class="skill-item">
                             <div class="skill-info">
                                 <span>Matplotlib (Python)</span>
-                                <span>80%</span>
+                                <span>90%</span>
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="90"></div>
@@ -600,7 +600,7 @@ transition:width 1.8s ease;
                         <div class="skill-item">
                             <div class="skill-info">
                                 <span>SQL</span>
-                                <span>85%</span>
+                                <span>95%</span>
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="95"></div>
@@ -620,7 +620,7 @@ transition:width 1.8s ease;
                         <div class="skill-item">
                             <div class="skill-info">
                                 <span>Power Query</span>
-                                <span>80%</span>
+                                <span>90%</span>
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="90"></div>
@@ -630,10 +630,10 @@ transition:width 1.8s ease;
                         <div class="skill-item">
                             <div class="skill-info">
                                 <span>Jupyter Notebook / VS Code</span>
-                                <span>85%</span>
+                                <span>95%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="90"></div>
+                                <div class="skill-progress" data-width="95"></div>
                             </div>
                         </div>
                     </div>
@@ -645,7 +645,7 @@ transition:width 1.8s ease;
                         <div class="skill-item">
                             <div class="skill-info">
                                 <span>Git & GitHub</span>
-                                <span>85%</span>
+                                <span>95%</span>
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="95"></div>
@@ -923,7 +923,30 @@ bar.style.width = width + "%";
 
 window.addEventListener("scroll", animateSkills);
 
+<script>
+
+window.addEventListener("scroll", function(){
+
+const skills = document.querySelectorAll(".skill-progress");
+
+skills.forEach(skill => {
+
+const position = skill.getBoundingClientRect().top;
+const screenHeight = window.innerHeight;
+
+if(position < screenHeight - 50){
+
+const width = skill.getAttribute("data-width");
+skill.style.width = width + "%";
+
+}
+
+});
+
+});
+
 </script>
+
 
 </body>
 
