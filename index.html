@@ -7,6 +7,8 @@
     <title>Divyanshu Negi - Data Analyst</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style> 
 /* RESET */
 *{
@@ -410,7 +412,128 @@ background:linear-gradient(90deg,#38bdf8,#0ea5e9);
 border-radius:20px;
 transition:width 1.8s ease;
 }
-    
+
+.contact-section{
+padding:100px 10%;
+background: linear-gradient(135deg,#0f172a,#1e293b);
+color:white;
+text-align:center;
+}
+
+.section-title{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.section-subtitle{
+color:#9ca3af;
+margin-bottom:60px;
+}
+
+.contact-container{
+display:flex;
+justify-content:space-between;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.contact-info{
+flex:1;
+display:flex;
+flex-direction:column;
+gap:25px;
+}
+
+.contact-card{
+display:flex;
+align-items:center;
+gap:20px;
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:15px;
+backdrop-filter:blur(10px);
+transition:0.3s;
+}
+
+.contact-card:hover{
+transform:translateY(-5px);
+background:rgba(255,255,255,0.08);
+}
+
+.contact-card i{
+font-size:25px;
+background:linear-gradient(45deg,#06b6d4,#3b82f6);
+padding:15px;
+border-radius:50%;
+}
+
+.contact-form{
+flex:1;
+}
+
+.contact-form form{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:15px;
+border:none;
+border-radius:10px;
+background:rgba(255,255,255,0.05);
+color:white;
+}
+
+.contact-form button{
+padding:15px;
+border:none;
+border-radius:10px;
+background:linear-gradient(45deg,#06b6d4,#3b82f6);
+color:white;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+}
+
+.contact-form button:hover{
+transform:scale(1.05);
+}
+
+.contact-section .section-title{
+color:#ffffff;
+}
+
+.contact-section .section-subtitle{
+color:#cbd5f5;
+}
+
+.social-links{
+margin-top:60px;
+display:flex;
+justify-content:center;
+gap:25px;
+}
+
+.social-links a{
+width:70px;
+height:70px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(255,255,255,0.08);
+border-radius:50%;
+font-size:26px;
+color:#ffffff;
+transition:0.3s;
+}
+
+.social-links a:hover{
+background:#38bdf8;
+transform:translateY(-5px);
+}
+
 </style>
 </head>
 
@@ -468,6 +591,27 @@ transition:width 1.8s ease;
             <div class="scroll-line"></div>
             <span>Scroll Down</span>
         </div>
+
+    <div class="social-links">
+
+<a href="https://github.com/" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://linkedin.com/" target="_blank">
+<i class="fab fa-linkedin-in"></i>
+</a>
+
+<a href="https://twitter.com/" target="_blank">
+<i class="fab fa-twitter"></i>
+</a>
+
+<a href="https://instagram.com/" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+</div>
+        
     </section>
 
 
@@ -669,62 +813,62 @@ transition:width 1.8s ease;
     </section>
     
     <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's work together on your next project</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p>divyanshun598@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Phone</h3>
-                            <p>+91 9910779061
-</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Location</h3>
-                            <p>New Delhi, India</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <!-- Option 1: EmailJS (More customizable) -->
-                    <form id="contact-form" action="https://formspree.io" method="POST">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5"
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary">Send Message</button>
-                    </form>
+   <section id="contact" class="contact-section">
 
+<h2 class="section-title">Get In Touch</h2>
+<p class="section-subtitle">Let's work together on your next project</p>
+
+<div class="contact-container">
+
+<div class="contact-info">
+
+<div class="contact-card">
+<i class="fas fa-envelope"></i>
+<div>
+<h3>Email</h3>
+<p>divyanshun598@gmail.com</p>
+</div>
+</div>
+
+<div class="contact-card">
+<i class="fas fa-phone"></i>
+<div>
+<h3>Phone</h3>
+<p>+91 9910779061</p>
+</div>
+</div>
+
+<div class="contact-card">
+<i class="fas fa-map-marker-alt"></i>
+<div>
+<h3>Location</h3>
+<p>New Delhi, India</p>
+</div>
+</div>
+
+</div>
+
+<div class="contact-form">
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<input type="text" placeholder="Subject">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
                     <!-- Option 2: Formspree (Simpler - Uncomment to use) -->
                     <!-- 
                     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
@@ -831,7 +975,28 @@ function animateSkills() {
 
 window.addEventListener("scroll", animateSkills);
 window.addEventListener("load", animateSkills);
+// CONTACT ANIMATION
 
+const contactSection = document.querySelector("#contact");
+
+function animateContact(){
+
+const position = contactSection.getBoundingClientRect().top;
+const screenHeight = window.innerHeight;
+
+if(position < screenHeight - 150){
+
+document.querySelector(".contact-info").style.transform="translateX(0)";
+document.querySelector(".contact-info").style.opacity="1";
+
+document.querySelector(".contact-form").style.transform="translateX(0)";
+document.querySelector(".contact-form").style.opacity="1";
+
+}
+
+}
+
+window.addEventListener("scroll", animateContact);
 </script>
 
 </body>
