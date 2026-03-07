@@ -775,25 +775,28 @@ let deleting = false;
 const typingElement = document.getElementById("typing-text");
 
 function typeEffect() {
-  if (!typingElement) return;
-
   const currentText = texts[textIndex];
 
   if (!deleting) {
     typingElement.textContent = currentText.substring(0, charIndex + 1);
     charIndex++;
+
     if (charIndex === currentText.length) {
       deleting = true;
       setTimeout(typeEffect, 1000);
       return;
     }
+
   } else {
+
     typingElement.textContent = currentText.substring(0, charIndex - 1);
     charIndex--;
+
     if (charIndex === 0) {
       deleting = false;
       textIndex = (textIndex + 1) % texts.length;
     }
+
   }
 
   setTimeout(typeEffect, deleting ? 60 : 100);
@@ -803,150 +806,33 @@ document.addEventListener("DOMContentLoaded", typeEffect);
 
 
 // ==========================
-// SKILL BAR ANIMATION
+// SKILLS ANIMATION
 // ==========================
+
 const skillBars = document.querySelectorAll(".skill-progress");
 
 function animateSkills() {
+
   skillBars.forEach(bar => {
-    const rect = bar.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 50) {
+
+    const position = bar.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (position < screenHeight - 50) {
+
       const width = bar.getAttribute("data-width");
       bar.style.width = width + "%";
+
     }
+
   });
+
 }
 
 window.addEventListener("scroll", animateSkills);
 window.addEventListener("load", animateSkills);
 
-
-// ==========================
-// ACTIVE NAV LINK ON SCROLL
-// ==========================
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-link");
-
-window.addEventListener("scroll", () => {
-  let current = "";
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    if (pageYOffset >= sectionTop - 200) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
-    }
-  });
-});
-
-    <script>
-
-/* ===== SKILLS ANIMATION ===== */
-
-const skillBars = document.querySelectorAll(".skill-progress");
-
-function animateSkills() {
-
-skillBars.forEach(bar => {
-
-const rect = bar.getBoundingClientRect();
-
-if(rect.top < window.innerHeight - 100){
-
-const width = bar.getAttribute("data-width");
-
-bar.style.width = width + "%";
-
-}
-
-});
-
-}
-
-window.addEventListener("scroll", animateSkills);
-
-<script>
-
-const skills = document.querySelectorAll(".skill-progress");
-
-function showSkills(){
-
-skills.forEach(skill => {
-
-const position = skill.getBoundingClientRect().top;
-
-const screenHeight = window.innerHeight;
-
-if(position < screenHeight - 100){
-
-const width = skill.getAttribute("data-width");
-
-skill.style.width = width + "%";
-
-}
-
-});
-
-}
-
-window.addEventListener("scroll", showSkills);
-
-<script>
-
-const skillBars = document.querySelectorAll(".skill-progress");
-
-function animateSkills(){
-
-skillBars.forEach(bar => {
-
-const position = bar.getBoundingClientRect().top;
-
-const screenHeight = window.innerHeight;
-
-if(position < screenHeight - 100){
-
-const width = bar.getAttribute("data-width");
-
-bar.style.width = width + "%";
-
-}
-
-});
-
-}
-
-window.addEventListener("scroll", animateSkills);
-
-<script>
-
-window.addEventListener("scroll", function(){
-
-const skills = document.querySelectorAll(".skill-progress");
-
-skills.forEach(skill => {
-
-const position = skill.getBoundingClientRect().top;
-const screenHeight = window.innerHeight;
-
-if(position < screenHeight - 50){
-
-const width = skill.getAttribute("data-width");
-skill.style.width = width + "%";
-
-}
-
-});
-
-});
-
 </script>
-
 
 </body>
 
