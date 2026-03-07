@@ -3,349 +3,330 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-
-        scale=1.0">
-    <title>Divyanshu Negi - Data Analyst</title> 
-    <link href="https://fonts.googleapis.com/css2?
-    family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-
-        awesome/6.0.0/css/all.min.css">
-    <style> 
-        
-    /* RESET */
-html{
-scroll-behavior:smooth;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyanshu Negi - Data Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style> 
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-*{
-    margin:0; 
-    padding:0; 
-    box-sizing:border-box; 
-}
 body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #ffffff; /* white default */
-    color: #1e293b;
+   font-family: 'Inter', sans-serif;
+   margin: 0;
+   padding: 0;
+   background: #ffffff;   /* white default */
+   color: #1e293b;
 }
 
 /* NAVBAR */
 .navbar{
-position:fixed;
-top:0;
-width:100%;
-background:linear-gradient(90deg,#0f172a,#020617);
-padding:18px 0;
-z-index:1000;
+  position:fixed;
+  top:0;
+  width:100%;
+  background:linear-gradient(90deg,#0f172a,#020617);
+  padding:18px 0;
+  z-index:1000;
 }
 
-.nav-link.active{ 
-color:#38bdf8;
-border-bottom:2px solid #38bdf8;
-}
-
-/* SCROLL INDICATOR FIX */ 
+    /* SCROLL INDICATOR FIX */
 .scroll-indicator {
-position: absolute;
-bottom: 30px; 
-left: 50%;
-transform: translateX(-50%);
-text-align: center; 
-color: #38bdf8;
-font-size: 14px;
-letter-spacing: 1px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #38bdf8;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
-.scroll-line { 
-width: 2px; 
-height: 40px; 
-background: #38bdf8;
-margin: 0 auto 8px; 
-animation: scrollAnim 1.5s infinite;
+.scroll-line {
+  width: 2px;
+  height: 40px;
+  background: #38bdf8;
+  margin: 0 auto 8px;
+  animation: scrollAnim 1.5s infinite;
 }
 
-@keyframes scrollAnim { 
-0% { opacity: 0; transform: translateY(-10px); }
-50% { opacity: 1; } 
-100% { opacity: 0; transform: translateY(10px); } 
-}    
-
+@keyframes scrollAnim {
+  0% { opacity: 0; transform: translateY(-10px); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(10px); }
+}
 .nav-container{
-width:90%;
-max-width:1200px;
-margin:auto; 
-display:flex;
-justify-content:space-between;
-align-items:center;
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .nav-logo span{
-color:#38bdf8;
-font-weight:700;
-font-size:22px;
-}
-.nav-menu{
-list-style:none;
-display:flex; 
-gap:30px;
-}
-.nav-link{ 
-text-decoration:none;
-color:#e5e7eb;
-font-weight:500;
-transition:0.3s;
-}
-.nav-link:hover{ 
-color:#38bdf8;
+  color:#38bdf8;
+  font-weight:700;
+  font-size:22px;
 }
 
-/* HERO SECTION */ 
-.hero{
-width:100%;
-min-height:100vh;
-background:linear-gradient(135deg,#0b1633 0%,#0a2540
-50%,#0b1633 100%);
-display:flex; 
-align-items:center;
-justify-content:space-between;
-padding:0 8%;
-padding-top:120px;
-position:relative; 
-overflow:hidden; 
+.nav-menu{
+  list-style:none;
+  display:flex;
+  gap:30px;
 }
+
+.nav-link{
+  text-decoration:none;
+  color:#e5e7eb;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.nav-link:hover{
+  color:#38bdf8;
+}
+
+/* HERO SECTION */
+    .hero{
+      width:100%;
+      min-height:100vh;
+      background:linear-gradient(135deg,#0b1633 0%,#0a2540 50%,#0b1633 100%);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 8%;
+      padding-top:120px;
+      position:relative;
+      overflow:hidden;
+    }
 
 .hero-container{
-display:flex;
-align-items:center;
-justify-content:space-between;
-width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
 }
 
 .hero-content{
-max-width:550px;
+  max-width:550px;
 }
-        
+
 .hero-title{
-font-size:52px;
-font-weight:700;
-margin-bottom:15px;
+  font-size:52px;
+  font-weight:700;
+  margin-bottom:15px;
 }
 
 .highlight{
-color:#38bdf8;
-text-shadow:0 0 15px rgba(56,189,248,0.6);
+  color:#38bdf8;
+  text-shadow:0 0 15px rgba(56,189,248,0.6);
 }
 
-.hero-subtitle{ 
-font-size:24px;
-margin-bottom:20px; 
-color:#38bdf8;
+.hero-subtitle{
+  font-size:24px;
+  margin-bottom:20px;
+  color:#38bdf8;
 }
+
 .hero-description{
-color:#cbd5e1;
-margin-bottom:30px;
-line-height:1.6;
+  color:#cbd5e1;
+  margin-bottom:30px;
+  line-height:1.6;
 }
+
 .hero-buttons{
-display:flex;
-gap:20px; 
+  display:flex;
+  gap:20px;
 }
 
 .btn-primary{
-background:#38bdf8; 
-color:#0f172a;
-padding:12px 24px; 
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
+  background:#38bdf8;
+  color:#0f172a;
+  padding:12px 24px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
 }
 
 .btn-primary:hover{
-background:#0ea5e9;
+  background:#0ea5e9;
 }
-.btn-secondary{ 
-border:2px solid #38bdf8; 
-color:#38bdf8;
-padding:12px 24px;
-border-radius:30px; 
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
+
+.btn-secondary{
+  border:2px solid #38bdf8;
+  color:#38bdf8;
+  padding:12px 24px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
 }
 
 .btn-secondary:hover{
-background:#38bdf8;
-color:#0f172a; 
+  background:#38bdf8;
+  color:#0f172a;
 }
 
-/* ===== ABOUT SECTION ===== */ 
-.about { 
-background: #f3f4f6;
-padding: 100px 0;
+/* ===== ABOUT SECTION ===== */
+
+.about {
+  background: #f3f4f6;
+  padding: 100px 0;
 }
+
 .about .section-header {
-text-align: center;
-margin-bottom: 60px;
-}
-.section-title{
-font-size:42px;
-font-weight:700;
-color:#1e293b;
-position:relative;
-display:inline-block;
-padding-bottom:15px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
-.section-title::after{
-content:"";
-position:absolute;
-left:50%;
-transform:translateX(-50%);
-bottom:0;
-width:70px;
-height:4px;
-background:#38bdf8;
-border-radius:10px;
-animation:lineGlow 2s infinite alternate;
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1e293b;
 }
 
-@keyframes lineGlow{
-from{box-shadow:0 0 5px #38bdf8;}
-to{box-shadow:0 0 20px #38bdf8;}
+.section-subtitle {
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 18px;
 }
-.section-subtitle { 
-margin-top: 10px;
-color: #64748b; 
-font-size: 18px;
+
+.about-content {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 0 20px;
 }
-.about-content { 
-max-width: 1100px; 
-margin: auto;
-display: grid;
-grid-template-columns: 1.2fr 1fr;
-gap: 60px; 
-align-items: center;
-padding: 0 20px; 
+
+.about-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
-.about-card { 
-background: #ffffff;
-padding: 40px;
-border-radius: 20px;
-box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
+
 .about-card h3 {
-font-size: 26px;
-margin-bottom: 20px; 
-color: #1e293b;
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #1e293b;
 }
+
 .about-card p {
-color: #475569;
-margin-bottom: 15px; 
-line-height: 1.7;
+  color: #475569;
+  margin-bottom: 15px;
+  line-height: 1.7;
 }
+
 .about-image {
-display: flex; 
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
+
 .about-profile-img {
-width: 350px;
-height: 350px;
-border-radius: 50%; 
-object-fit: cover; 
-border: 6px solid #38bdf8;
-box-shadow: 0 0 40px rgba(56,189,248,0.4);
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #38bdf8;
+  box-shadow: 0 0 40px rgba(56,189,248,0.4);
 }
+
 /* Responsive */
 @media(max-width:900px){
-.about-content{ 
-grid-template-columns:1fr;
-text-align:center;
-}
+  .about-content{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
 }
 
 /* PROFILE IMAGE */
-.hero-image{ 
-position:relative; 
+.hero-image{
+  position:relative;
 }
 
-.hero-profile-img{ 
-width:360px;
-height:360px; 
-border-radius:50%;
-object-fit:cover;
-border:6px solid #00e5ff;
-box-shadow:0 0 50px rgba(0,229,255,0.6);
-animation:floatImg 6s ease-in-out infinite;
-position:relative;
-z-index:5; 
+.hero-profile-img{
+  width:360px;
+  height:360px;
+  border-radius:50%;
+  object-fit:cover;
+  border:6px solid #00e5ff;
+  box-shadow:0 0 50px rgba(0,229,255,0.6);
+  animation:floatImg 6s ease-in-out infinite;
 }
 
-@keyframes floatImg{ 
-0%{transform:translateY(0)}
-50%{transform:translateY(-15px)} 
-100%{transform:translateY(0)}
+@keyframes floatImg{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-15px)}
+  100%{transform:translateY(0)}
 }
 
-/* FLOATING BUBBLES */ 
+/* FLOATING BUBBLES */
 .floating-element{
-position:absolute;
-border-radius:50%;
-background:rgba(56,189,248,0.8);
-animation:floatBubble 6s ease-in-out infinite;
-box-shadow:0 0 40px rgba(56,189,248,0.9);
-filter: blur(2px);
+  position:absolute;
+  background:rgba(0,229,255,0.25);
+  border-radius:50%;
+  animation:float 8s ease-in-out infinite;
 }
 
 .floating-element:nth-child(1){
-width:120px; 
-height:120px;
-top:40%; 
-left:8%; 
+  width:80px;
+  height:80px;
+  top:20%;
+  left:60%;
 }
 
 .floating-element:nth-child(2){
-width:60px;
-height:60px;
-top:55%; 
-left:18%; 
-animation-delay:2s;
+  width:40px;
+  height:40px;
+  top:50%;
+  left:70%;
+  animation-delay:2s;
 }
 
-.floating-element:nth-child(3){ 
-width:80px;
-height:80px;
-top:48%; 
-left:3%;
-animation-delay:4s;
+.floating-element:nth-child(3){
+  width:60px;
+  height:60px;
+  top:40%;
+  left:50%;
+  animation-delay:4s;
 }
+
 @keyframes float{
-0%{transform:translateY(0)}
-50%{transform:translateY(-25px)} 
-100%{transform:translateY(0)} 
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-25px)}
+  100%{transform:translateY(0)}
 }
 
 /* SECTIONS */
 section{
-padding:100px 8%;
+  padding:100px 8%;
 }
+
 /* RESPONSIVE */
 @media(max-width:900px){
-.hero-container{
-flex-direction:column;
-text-align:center;
-}
-.hero-profile-img{
-margin-top:40px;
-}
+  .hero-container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-profile-img{
+    margin-top:40px;
+  }
 }
 
 /* ===== SKILLS SECTION ===== */
-.skills{ 
-background:#f3f4f6; 
-padding:100px 0; 
+
+.skills{
+background:#f3f4f6;
+padding:100px 0;
 text-align:center;
 }
 
@@ -354,31 +335,32 @@ max-width:1100px;
 margin:60px auto 0;
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:40px; 
+gap:40px;
 padding:0 20px;
 }
-
+    
 .skill-category{
 background:#ffffff;
 padding:35px;
-border-radius:18px; 
+border-radius:18px;
 box-shadow:0 10px 30px rgba(0,0,0,0.05);
 }
 
 .skill-category h3{
 font-size:24px;
 margin-bottom:25px;
-color:#1e293b; 
+color:#1e293b;
 }
-.skill-item{ 
+
+.skill-item{
 margin-bottom:22px;
 }
 
 .skill-info{
-display:flex; 
-justify-content:space-between; 
+display:flex;
+justify-content:space-between;
 margin-bottom:6px;
-font-weight:500; 
+font-weight:500;
 }
 
 .skill-bar{
@@ -391,693 +373,581 @@ overflow:hidden;
 .skill-progress{
 height:100%;
 width:0%;
-background:linear-gradient(90deg,#06b6d4,#3b82f6);
+background:linear-gradient(90deg,#38bdf8,#0ea5e9);
 border-radius:20px;
-transition:width 2s ease-in-out;
+transition:width 2s ease;
 }
 
-.floating-elements{ 
-position:absolute;
-top:0;
-left:0; 
-width:100%;
-height:100%; 
-z-index:3;
-}
+/* Responsive */
 
-.floating-element{
-position:absolute;
-border-radius:50%;
-background:rgba(56,189,248,0.6);
-animation:floatBubble 6s ease-in-out infinite;
-box-shadow:0 0 20px rgba(56,189,248,0.8);
-}
-
-.floating-element:nth-child(1){
-width:90px;
-height:90px;
-top:40%; 
-left:5%;
-}
-
-.floating-element:nth-child(2){
-width:50px;
-height:50px;
-top:55%; 
-left:15%; 
-animation-delay:2s;
-}
-
-.floating-element:nth-child(3){ 
-width:70px;
-height:70px;
-top:48%;
-left:10%;
-animation-delay:4s;
-}
-
-@keyframes floatBubble{
-0%{transform:translateY(0)}
-50%{transform:translateY(-40px)}
-100%{transform:translateY(0)} 
-}
-        
-.skill-category:hover{
-transform:translateY(-6px);
-transition:0.3s;
-}
-
-/* Responsive */        
 @media(max-width:900px){
 .skills-grid{
 grid-template-columns:1fr;
-} 
 }
-
-.section-title{
-position:relative;
-display:inline-block;
 }
 
 .section-title::after{
 content:"";
-position:absolute;
-left:50%;
-transform:translateX(-50%);
-bottom:-10px;
-width:70px;
+display:block;
+width:60px;
 height:4px;
 background:#38bdf8;
+margin:12px auto 0;
 border-radius:10px;
-animation:lineGlow 2s infinite alternate;
 }
 
-@keyframes lineGlow{
-from{
-box-shadow:0 0 5px #38bdf8;
-}
-to{
-box-shadow:0 0 20px #38bdf8;
-}
-}
-    
-.skill-bar{ 
+.skill-bar{
 height:8px;
 background:#e5e7eb;
 border-radius:20px;
 overflow:hidden;
 }
+
 .skill-progress{
-height:100%; 
+height:100%;
 width:0%;
 background:linear-gradient(90deg,#38bdf8,#0ea5e9);
 border-radius:20px;
 transition:width 1.8s ease;
 }
-
-/* CONTACT SECTION */ 
-.contact-section{ 
-padding:100px 8%;
-background:linear-gradient(135deg,#0f172a,#1e293b);
-color:white;
-text-align:center; 
-}
-
-.contact-container{
-display:flex; 
-gap:40px;
-justify-content:space-between; 
-margin-top:50px;
-flex-wrap:wrap; 
-}
-
-.contact-info{
-flex:1; 
-display:flex;
-flex-direction:column;
-gap:25px;
-transform:translateX(-80px);
-opacity:0;
-transition:1s;
-}
-
-.contact-form{
-flex:1;
-transform:translateX(80px); 
-opacity:0;
-transition:1s;
-}
-
-.contact-card{
-display:flex;
-align-items:center;
-gap:20px;
-background:rgba(255,255,255,0.05); 
-padding:25px;
-border-radius:15px;
-backdrop-filter:blur(10px);
-}
-
-.contact-card i{
-font-size:22px;
-background:linear-gradient(45deg,#06b6d4,#3b82f6);
-padding:15px; 
-border-radius:50%;
-}
-
-.contact-form form{
-display:flex;
-flex-direction:column;
-gap:20px; 
-}
-
-.contact-form input,
-.contact-form textarea{
-padding:15px;
-border:none;
-border-radius:10px;
-background:rgba(255,255,255,0.05);
-color:white;
-}
-
-.contact-form button{
-padding:15px;
-border:none;
-border-radius:10px;
-background:linear-gradient(45deg,#06b6d4,#3b82f6);
-color:white;
-cursor:pointer;
-font-weight:600;
-}
-
-.contact-section .section-title{
-color:#ffffff;
-}
-        
-.contact-section .section-subtitle{
-color:#cbd5f5;
-}
-
-.social-links{ 
-margin-top:60px;
-display:flex;
-justify-content:center;
-gap:25px;
-}
-
-.social-links a{
-width:70px;
-height:70px;
-display:flex;
-align-items:center; 
-justify-content:center;
-background:rgba(255,255,255,0.08);
-border-radius:50%;
-font-size:26px;
-color:#ffffff;
-transition:0.3s;
-}
-
-.social-links a:hover{
-background:#38bdf8; 
-transform:translateY(-5px);
-}
-
-/* BUBBLES VISIBILITY FIX */
-.floating-elements{
-position:absolute;
-top:0;
-left:0; 
-width:100%;
-height:100%;
-z-index:1;
-}
-
-.floating-element{ 
-position:absolute;
-border-radius:50%;
-background:rgba(56,189,248,0.8);
-animation:floatBubble 6s ease-in-out infinite;
-box-shadow:0 0 40px rgba(56,189,248,0.9);
-filter:blur(2px);
-}
-
-.floating-element:nth-child(1){
-width:120px;
-height:120px;
-top:40%; 
-left:8%;
-}
-
-.floating-element:nth-child(2){
-width:60px;
-height:60px;
-top:55%; 
-left:18%; 
-animation-delay:2s; 
-}
-
-.floating-element:nth-child(3){
-width:80px;
-height:80px;
-top:48%;
-left:3%;
-animation-delay:4s;
-}
-
-@keyframes floatBubble{ 
-0%{transform:translateY(0)} 
-50%{transform:translateY(-40px)}
-100%{transform:translateY(0)} 
-}
-
-/* FIX SKILLS TITLE LINE */
-
-.skills .section-title::after{
-content:"";
-display:block;
-width:70px;
-height:4px;
-background:#38bdf8;
-margin:12px auto 0;
-border-radius:10px;
-animation:lineGlow 2s infinite alternate;
-}
-
-@keyframes lineGlow{
-from{
-box-shadow:0 0 5px #38bdf8;
-}
-to{
-box-shadow:0 0 20px #38bdf8;
-}
-}
-
+    
 </style>
-</head> 
+</head>
 
-<body> 
-<!-- Navigation -->
-<nav class="navbar" id="navbar"> 
-<div class="nav-container"> 
-<div class="nav-logo"> 
-<span>DN</span>
-</div>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>DN</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-<ul class="nav-menu"> 
-<li><a href="#home" class="nav-link">Home</a></li>
-<li><a href="#about" class="nav-link">About</a></li> 
-<li><a href="#skills" class="nav-link">Skills</a></li>
-<li><a href="#projects" class="nav-link">Projects</a></li> 
-<li><a href="#contact" class="nav-link">Contact</a></li>
-</ul>
-<div class="hamburger">
-<span></span>
-<span></span>
-<span></span> 
-</div>
-</div> 
-</nav>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Divyanshu Negi</span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span class="typing-text" id="typing-text"></span>
+                    <span class="cursor">|</span>
+                </p>
+                <p class="hero-description">
+                    Leveraging Python, SQL, and Power BI to turn data into decisions
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn-primary">View My Work</a>
+                    <a href="#contact" class="btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-elements">
+                    <div class="floating-element" style="--delay: 0s"></div>
+                    <div class="floating-element" style="--delay: 1s"></div>
+                    <div class="floating-element" style="--delay: 2s"></div>
+                </div>
+                <img src="profile.photo.png" alt="Divyanshu Negi" class="hero-profile-img">
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
 
-<!-- Hero Section --> 
-<section class="hero" id="home"> 
-<div class="hero-container">
-<div class="hero-content">
-<h1 class="hero-title">
-Hi, I'm <span class="highlight">Divyanshu Negi</span>
-</h1>
-<p class="hero-subtitle">
-<span class="typing-text" id="typing-text"></span> 
-<span class="cursor">|</span> 
-</p> 
-<p class="hero-description">
-Leveraging Python, SQL, and Power BI to turn data into decisions
-</p> 
-<div class="hero-buttons">
-<a href="#projects" class="btn-primary">View My Work</a>
-<a href="#contact" class="btn-secondary">Get In Touch</a>
-</div> 
-</div> 
-<div class="hero-image"> 
-<div class="floating-elements"> 
-<div class="floating-element"></div>
-<div class="floating-element"></div>
-<div class="floating-element"></div>
-</div>
 
-<img src="profile.photo.png" alt="Divyanshu Negi" 
-class="hero-profile-img">
-</div>
-</div>
-<div class="scroll-indicator">
-<div class="scroll-line"></div> 
-<span>Scroll Down</span> 
-</div>
-</section>
+    <!-- About Section -->
+    <section class="about" id="about">    
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know more about who I am and what I do</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card">
+                        <h3>My Story</h3>
+                        <p>
+                            I’m Divyanshu Negi, a passionate data analyst eager to turn raw data into meaningful
+                            insights.
 
-<!-- About Section -->
-<section class="about" id="about">
-<div class="container">
-<div class="section-header">
-<h2 class="section-title">About Me</h2>
-<p class="section-subtitle">Get to know more about who I am and what I do</p>
-</div>
-<div class="about-content">
-<div class="about-text">
-<div class="about-card">
-<h3>My Story</h3> <p> I’m Divyanshu Negi, a passionate data analyst eager to turn raw data into meaningful insights.
+                        </p>
+                        <p>
+                            My journey began with curiosity — I’ve always been drawn to finding patterns, solving
+                            problems, and understanding the “why” behind numbers. This curiosity led me to explore tools
+                            like Excel, SQL, Python, and Power BI, where I learned to clean, analyze, and visualize data
+                            effectively.
 
-</p> 
-<p>
-My journey began with curiosity — I’ve always been drawn to finding patterns, solving
-    problems, and understanding the “why” behind 
-    numbers. This curiosity led me to explore tools 
-    like Excel, SQL, Python, and Power BI, where I learned 
-    to clean, analyze, and visualize data effectively.
+                        </p>
+                        <p>
+                            Through personal and academic projects, I’ve developed a strong foundation in data
+                            storytelling, dashboard creation, and data-driven decision-making. I enjoy transforming
+                            messy datasets into clear visual insights that make sense to everyone.
 
-</p>
-<p>
-Through personal and academic projects, I’ve
-developed a strong foundation in data
-storytelling, dashboard creation, and data-driven 
-decision-making. I enjoy transforming 
-messy datasets into clear visual insights that make sense to everyone.
+                        </p>
+                        <p>
+                            I may be at the start of my professional journey, but my passion for data and continuous
+                            learning keeps me moving forward — turning information into impact, one dataset at a time.
+                        </p>
+                    </div>
 
-</p>
-<p>
-I may be at the start of my professional journey, but 
-my passion for data and continuous
-learning keeps me moving forward — turning 
-information into impact, one dataset at a time.
-</p>
-</div>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="3">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="2">0</span>
+                            <span class="stat-label">Clients & Startups Worked With</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="0">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
 
-<div class="stats-grid">
-<div class="stat-item">
-<span class="stat-number" data-
-target="3">0</span> 
-<span class="stat-label">Projects Completed</span> 
-</div>
-<div class="stat-item">
-<span class="stat-number" data-
-target="2">0</span>
-<span class="stat-label">Clients & Startups Worked
-With</span>
-</div> 
-<div class="stat-item"> 
-<span class="stat-number" data-
-target="0">0</span> 
-<span class="stat-label">Years Experience</span>
-</div>
-</div>
-</div>
+                <div class="about-image">
+                    <img src="profile.photo.png" alt="Divyanshu Negi" class="about-profile-img">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="about-image"> 
-<img src="profile.photo.png" alt="Divyanshu Negi" 
-class="about-profile-img">
-</div>
-</div>
-</div>
-</section>
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">Technologies and tools I work with as a Data Analyst</p>
+            </div>
+            <div class="skills-content">
+                <div class="skills-grid">
+                    <!-- Data Visualization & Analysis -->
+                    <div class="skill-category">
+                        <h3>Data Visualization & Analysis</h3>
 
-<!-- Skills Section --> 
-<section class="skills" id="skills">
-<div class="container">
-<div class="section-header">
-<h2 class="section-title">Skills & Expertise</h2>
-<p class="section-subtitle">Technologies and tools I work
-with as a Data Analyst</p>
-</div>
-<div class="skills-content">
-<div class="skills-grid">
-<!-- Data Visualization & Analysis -->
-<div class="skill-category"><h3>
-Data Visualization & Analysis</h3>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Power BI</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
 
-<div class="skill-item">
-<div class="skill-info">
-<span>Power BI</span>
-<span>90%</span>
-</div>
-<div class="skill-bar">
-<div class="skill-progress" data-width="90">
-</div>    
-</div> </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Tableau</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
 
-<div class="skill-item">
-<div class="skill-info">
-    <span>Tableau</span>
-    <span>90%</span>
-</div> <div class="skill-bar"> 
-<div class="skill-progress" data-width="90">
-</div>
-</div> </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Excel</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
 
-<div class="skill-item">
-<div class="skill-info"> 
-<span>Excel</span>
-<span>95%</span>
-</div>
-<div class="skill-bar">
-<div class="skill-progress" data-width="95">
-</div> 
-</div> </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Matplotlib (Python)</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                    </div>
 
-<div class="skill-item">
-<div class="skill-info">
-<span>Matplotlib (Python)</span>
-<span>90%</span>
-</div>
-<div class="skill-bar">
-<div class="skill-progress" data-width="90">
-</div> 
-</div>
-</div> 
-</div>
+                    <!-- Programming & Data Processing -->
+                    <div class="skill-category">
+                        <h3>Programming & Data Processing</h3>
 
-<!-- Programming & Data Processing --> 
-<div class="skill-category">
-<h3>Programming & Data Processing</h3> 
-<div class="skill-item">
-<div class="skill-info"> 
-<span>Python</span>
-<span>90%</span> 
-</div>
-<div class="skill-bar">
-<div class="skill-progress" data-width="90">
-</div> 
-</div> </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
 
-<div class="skill-item"> 
-<div class="skill-info">
-<span>SQL</span>
-<span>95%</span> 
-</div>
-<div class="skill-bar"> <div class="skill-progress" data-width="95">
-</div>
-</div> </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>SQL</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
 
-<div class="skill-item"> 
-<div class="skill-info">
-<span>Excel / CSV</span> 
-<span>95%</span>
-</div>
-<div class="skill-bar"> <div class="skill-progress" data-width="95">
-</div>
-</div> </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Excel / CSV</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
 
-<div class="skill-item"> 
-<div class="skill-info">
-<span>Power Query</span>
-<span>90%</span>
-</div>
-<div class="skill-bar">
-<div class="skill-progress" data-width="90">
-</div> 
-</div> </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Power Query</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
 
-<div class="skill-item">
-<div class="skill-info">
-<span>Jupyter Notebook / VS Code</span> 
-<span>95%</span>
-</div>
-<div class="skill-bar">
-<div class="skill-progress" data-width="95">
-</div> 
-</div>
-</div> </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Jupyter Notebook / VS Code</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                    </div>
 
-<!-- Tools & Others --> 
-<div class="skill-category">
-<h3>Tools & Others</h3>
-<div class="skill-item"> 
-<div class="skill-info">
-<span>Git & GitHub</span>
-<span>95%</span>
-</div>
-<div class="skill-bar">
-<div class="skill-progress" data-width="95">
-</div> 
-</div>
-</div>
+                    <!-- Tools & Others -->
+                    <div class="skill-category">
+                        <h3>Tools & Others</h3>
 
-<div class="skill-item">
-<div class="skill-info">
-<span>Google Sheets</span>
-<span>90%</span> 
-</div> <div class="skill-bar">
-<div class="skill-progress" data-width="90">
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Git & GitHub</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
 
-</div>
-</section> 
-<section id="contact" class="contact-section">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Google Sheets</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<h2 class="section-title">Get In Touch</h2>
-<p class="section-subtitle">Let's work together on your next project</p>
-
-<div class="contact-container">
-<div class="contact-info"> 
-<div class="contact-card"> 
-<i class="fas fa-envelope"></i>
-<div>
-<h3>Email</h3>
-<p>divyanshun598@gmail.com</p>
-</div> 
-</div>
-
-<div class="contact-card">
-<i class="fas fa-phone"></i>
-<div>
-<h3>Phone</h3>
-<p>+91 9910779061</p>
-</div>
-</div>
-
-<div class="contact-card">
-<i class="fas fa-map-marker-alt"></i>
-<div> 
-<h3>Location</h3>
-<p>New Delhi, India</p>
-</div> 
-</div>
-</div>
-
-<div class="contact-form">
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<input type="text" placeholder="Subject"> 
-<textarea placeholder="Your Message"></textarea>
-<button type="submit">Send Message</button>
-
-</form>
-</div>
-</div>
-<div class="social-links">
-
-<a href="https://github.com/divyanshunegi-data-analytics"
-target="_blank">
-<i class="fab fa-github"></i>
-</a>
-
-<a href="https://www.linkedin.com/in/divyanshu-negi-47b2ba315/"
-target="_blank">
-<i class="fab fa-linkedin-in"></i>
-</a>
+        </div>
+    </section>
     
-<a href="https://twitter.com/" target="_blank">
-<i class="fab fa-twitter"></i>
-</a>
-    
-<a href="https://www.instagram.com/divyanshu_negi11/" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together on your next project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>divyanshun598@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+91 9910779061
+</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>New Delhi, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <!-- Option 1: EmailJS (More customizable) -->
+                    <form id="contact-form" action="https://formspree.io" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
 
-</div>
-</section>
-<!-- Footer --> 
-<footer class="footer">
-<div class="container">
-<p>&copy; 2026 Divyanshu Negi. All rights reserved.</p>
-</div>
-</footer>
+                    <!-- Option 2: Formspree (Simpler - Uncomment to use) -->
+                    <!-- 
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                    -->
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/divyanshunegi-data-analytics" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/divyanshu-negi-47b2ba315/" class="social-link"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/divyanshu_negi11/" class="social-link"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Divyanshu Negi. All rights reserved.</p>
+        </div>
+    </footer>
 
 <script>
-    
+
 // ==========================
-// TYPING ANIMATION 
-// ========================== 
-const texts = ["Data Analyst", "Power BI Developer", "SQL & Python
-Enthusiast"];
+// TYPING ANIMATION
+// ==========================
+const texts = ["Data Analyst", "Power BI Developer", "SQL & Python Enthusiast"];
 let textIndex = 0;
 let charIndex = 0;
 let deleting = false;
 const typingElement = document.getElementById("typing-text");
 
-function typeEffect()
-{ const currentText = texts[textIndex];
-if (!deleting) {
-typingElement.textContent = currentText.substring(0, charIndex + 1); 
-charIndex++;
-if (charIndex === currentText.length) {
-deleting = true; 
-setTimeout(typeEffect, 1000);
-return;
+function typeEffect() {
+  if (!typingElement) return;
+
+  const currentText = texts[textIndex];
+
+  if (!deleting) {
+    typingElement.textContent = currentText.substring(0, charIndex + 1);
+    charIndex++;
+    if (charIndex === currentText.length) {
+      deleting = true;
+      setTimeout(typeEffect, 1000);
+      return;
+    }
+  } else {
+    typingElement.textContent = currentText.substring(0, charIndex - 1);
+    charIndex--;
+    if (charIndex === 0) {
+      deleting = false;
+      textIndex = (textIndex + 1) % texts.length;
+    }
+  }
+
+  setTimeout(typeEffect, deleting ? 60 : 100);
 }
 
-} else { 
-typingElement.textContent = currentText.substring(0, charIndex - 1); 
-charIndex--; 
-if (charIndex === 0) {
-deleting = false;
-textIndex = (textIndex + 1) % texts.length;
-} 
-} 
-setTimeout(typeEffect, deleting ? 60 : 100);
-}
 document.addEventListener("DOMContentLoaded", typeEffect);
 
+
 // ==========================
-// SKILLS ANIMATION
+// SKILL BAR ANIMATION
 // ==========================
 const skillBars = document.querySelectorAll(".skill-progress");
 
-function animateSkills(){
-skillBars.forEach(bar=>{
-const position = bar.getBoundingClientRect().top;
-const screenHeight = window.innerHeight;
-
-if(position < screenHeight - 100){
-const width = bar.getAttribute("data-width");
-bar.style.width = width + "%";
-}
-});
+function animateSkills() {
+  skillBars.forEach(bar => {
+    const rect = bar.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 50) {
+      const width = bar.getAttribute("data-width");
+      bar.style.width = width + "%";
+    }
+  });
 }
 
 window.addEventListener("scroll", animateSkills);
-window.addEventListener("load", animateSkills); 
-// CONTACT ANIMATION
-const contactSection = document.querySelector("#contact");
-function animateContact(){ 
-const position = contactSection.getBoundingClientRect().top;
+window.addEventListener("load", animateSkills);
+
+
+// ==========================
+// ACTIVE NAV LINK ON SCROLL
+// ==========================
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    if (pageYOffset >= sectionTop - 200) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+
+    <script>
+
+/* ===== SKILLS ANIMATION ===== */
+
+const skillBars = document.querySelectorAll(".skill-progress");
+
+function animateSkills() {
+
+skillBars.forEach(bar => {
+
+const rect = bar.getBoundingClientRect();
+
+if(rect.top < window.innerHeight - 100){
+
+const width = bar.getAttribute("data-width");
+
+bar.style.width = width + "%";
+
+}
+
+});
+
+}
+
+window.addEventListener("scroll", animateSkills);
+
+<script>
+
+const skills = document.querySelectorAll(".skill-progress");
+
+function showSkills(){
+
+skills.forEach(skill => {
+
+const position = skill.getBoundingClientRect().top;
+
 const screenHeight = window.innerHeight;
 
-if(position < screenHeight - 150){
-document.querySelector(".contact-
-info").style.transform="translateX(0)";
-document.querySelector(".contact-info").style.opacity="1"; 
-document.querySelector(".contact-
-form").style.transform="translateX(0)";
-document.querySelector(".contact-form").style.opacity="1";
+if(position < screenHeight - 100){
+
+const width = skill.getAttribute("data-width");
+
+skill.style.width = width + "%";
+
 }
+
+});
+
 }
-window.addEventListener("scroll", animateContact);
+
+window.addEventListener("scroll", showSkills);
+
+<script>
+
+const skillBars = document.querySelectorAll(".skill-progress");
+
+function animateSkills(){
+
+skillBars.forEach(bar => {
+
+const position = bar.getBoundingClientRect().top;
+
+const screenHeight = window.innerHeight;
+
+if(position < screenHeight - 100){
+
+const width = bar.getAttribute("data-width");
+
+bar.style.width = width + "%";
+
+}
+
+});
+
+}
+
+window.addEventListener("scroll", animateSkills);
+
+<script>
+
+window.addEventListener("scroll", function(){
+
+const skills = document.querySelectorAll(".skill-progress");
+
+skills.forEach(skill => {
+
+const position = skill.getBoundingClientRect().top;
+const screenHeight = window.innerHeight;
+
+if(position < screenHeight - 50){
+
+const width = skill.getAttribute("data-width");
+skill.style.width = width + "%";
+
+}
+
+});
+
+});
+
 </script>
+
+
 </body>
+
 </html>
