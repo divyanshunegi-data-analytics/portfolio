@@ -613,6 +613,28 @@ animation-delay:4s;
 100%{transform:translateY(0)} 
 }
 
+/* FIX SKILLS TITLE LINE */
+
+.skills .section-title::after{
+content:"";
+display:block;
+width:70px;
+height:4px;
+background:#38bdf8;
+margin:12px auto 0;
+border-radius:10px;
+animation:lineGlow 2s infinite alternate;
+}
+
+@keyframes lineGlow{
+from{
+box-shadow:0 0 5px #38bdf8;
+}
+to{
+box-shadow:0 0 20px #38bdf8;
+}
+}
+
 </style>
 </head> 
 
