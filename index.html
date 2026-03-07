@@ -433,16 +433,33 @@ grid-template-columns:1fr;
 } 
 }
 
-.section-title::after{
-content:"";
-display:block;
-width:60px;
-height:4px;
-background:#38bdf8;
-margin:12px auto 0;
-border-radius:10px;
+.section-title{
+position:relative;
+display:inline-block;
 }
 
+.section-title::after{
+content:"";
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+bottom:-10px;
+width:70px;
+height:4px;
+background:#38bdf8;
+border-radius:10px;
+animation:lineGlow 2s infinite alternate;
+}
+
+@keyframes lineGlow{
+from{
+box-shadow:0 0 5px #38bdf8;
+}
+to{
+box-shadow:0 0 20px #38bdf8;
+}
+}
+    
 .skill-bar{ 
 height:8px;
 background:#e5e7eb;
@@ -984,7 +1001,7 @@ const typingElement = document.getElementById("typing-text");
 
 function typeEffect()
 { const currentText = texts[textIndex];
-if (!deleting) (
+if (!deleting) {
 typingElement.textContent = currentText.substring(0, charIndex + 1); 
 charIndex++;
 if (charIndex === currentText.length) {
