@@ -526,6 +526,20 @@ background:#38bdf8;
 transform:translateY(-5px);
 }
 
+/* ABOUT ANIMATION */
+
+.about-text{
+transform:translateX(-80px);
+opacity:0;
+transition:1s;
+}
+
+.about-image{
+transform:translateX(80px);
+opacity:0;
+transition:1s;
+}
+
 </style>
 </head>
 
@@ -990,6 +1004,30 @@ document.querySelector(".contact-form").style.opacity="1";
 }
 
 window.addEventListener("scroll", animateContact);
+
+// ABOUT ANIMATION
+
+const aboutSection = document.querySelector("#about");
+
+function animateAbout(){
+
+const position = aboutSection.getBoundingClientRect().top;
+const screenHeight = window.innerHeight;
+
+if(position < screenHeight - 150){
+
+document.querySelector(".about-text").style.transform="translateX(0)";
+document.querySelector(".about-text").style.opacity="1";
+
+document.querySelector(".about-image").style.transform="translateX(0)";
+document.querySelector(".about-image").style.opacity="1";
+
+}
+
+}
+
+window.addEventListener("scroll", animateAbout);
+    
 </script>
 
 </body>
