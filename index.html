@@ -537,9 +537,9 @@ transform:translateY(-5px);
 /* ABOUT ANIMATION */
 
 .about-text{
-transform:translateX(-80px);
+transform:translateX(-120px);
 opacity:0;
-transition:1s;
+transition:1.3s ease;
 }
 
 .about-image{
@@ -1022,7 +1022,7 @@ function animateAbout(){
 const position = aboutSection.getBoundingClientRect().top;
 const screenHeight = window.innerHeight;
 
-if(position < screenHeight - 150){
+if(position < screenHeight - 50){
 
 document.querySelector(".about-text").style.transform="translateX(0)";
 document.querySelector(".about-text").style.opacity="1";
