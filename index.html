@@ -683,6 +683,17 @@ transition:transform 0.4s ease;
 transform:scale(1.08);
 }
 
+.project-card{
+opacity:0;
+transform:translateY(60px);
+transition:all 0.8s ease;
+}
+
+.project-card.show{
+opacity:1;
+transform:translateY(0);
+}
+
 </style>
 </head>
 
@@ -1157,6 +1168,29 @@ function animateSkills() {
 
 window.addEventListener("scroll", animateSkills);
 window.addEventListener("load", animateSkills);
+
+// PROJECT ANIMATION
+
+const projectCards = document.querySelectorAll(".project-card");
+
+function animateProjects(){
+
+projectCards.forEach(card => {
+
+const position = card.getBoundingClientRect().top;
+const screenHeight = window.innerHeight;
+
+if(position < screenHeight - 100){
+card.classList.add("show");
+}
+
+});
+
+}
+
+window.addEventListener("scroll", animateProjects);
+window.addEventListener("load", animateProjects);
+    
 // CONTACT ANIMATION
 
 const contactSection = document.querySelector("#contact");
