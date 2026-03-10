@@ -755,6 +755,26 @@ font-weight:500;
 .project-filter button:hover{
 background:#0284c7;
 }
+
+/* PROJECT ANIMATION */
+
+.project-card{
+opacity:0;
+transition:all 0.8s ease;
+}
+
+.project-left{
+transform:translateX(-80px);
+}
+
+.project-right{
+transform:translateX(80px);
+}
+
+.project-show{
+opacity:1;
+transform:translateX(0);
+}
     
 </style>
 </head>
@@ -1034,7 +1054,7 @@ background:#0284c7;
 <div class="projects-grid">
 
 <!-- Project 1 -->
-<div class="project-card python">
+<div class="project-card project-left python">
 
 <img src="ipl-project.png" class="project-image" onclick="openModal(this.src)">
 
@@ -1072,7 +1092,7 @@ Live Demo
 </div>
 
     <!-- Project 2 -->
-<div class="project-card powerbi">
+<div class="project-card project-right powerbi">
 
 <img src="sales-loss-dashboard.png.png" class="project-image" onclick="openModal(this.src)">
 
@@ -1291,7 +1311,7 @@ const position = card.getBoundingClientRect().top;
 const screenHeight = window.innerHeight;
 
 if(position < screenHeight - 100){
-card.classList.add("show");
+card.classList.add("project-show");
 }
 
 });
