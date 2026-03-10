@@ -1469,6 +1469,12 @@ counters.forEach(counter => {
 const target = parseInt(counter.getAttribute("data-target"));
 let count = 0;
 
+// agar target 0 hai to direct 0 hi show karo
+if(target === 0){
+counter.innerText = 0;
+return;
+}
+
 const interval = setInterval(() => {
 
 count++;
@@ -1479,7 +1485,7 @@ if(count >= target){
 clearInterval(interval);
 }
 
-}, 120);   // speed control
+}, 400); // yaha speed control
 
 });
 
@@ -1490,6 +1496,7 @@ counterStarted = true;
 window.addEventListener("scroll", () => {
 
 const statsSection = document.querySelector(".stats-grid");
+
 const position = statsSection.getBoundingClientRect().top;
 const screenHeight = window.innerHeight;
 
