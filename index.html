@@ -1458,7 +1458,6 @@ project.style.display = "none";
 // STATS COUNTER ANIMATION
 
 const counters = document.querySelectorAll(".stat-number");
-
 let counterStarted = false;
 
 function startCounter(){
@@ -1467,30 +1466,20 @@ if(counterStarted) return;
 
 counters.forEach(counter => {
 
-const target = +counter.getAttribute("data-target");
-
+const target = parseInt(counter.getAttribute("data-target"));
 let count = 0;
 
-const updateCounter = () => {
+const interval = setInterval(() => {
 
-const increment = target / 60;
+count++;
 
-if(count < target){
+counter.innerText = count;
 
-count += increment;
-counter.innerText = Math.ceil(count);
-
-setTimeout(updateCounter,30);
-
+if(count >= target){
+clearInterval(interval);
 }
 
-else{
-counter.innerText = target;
-}
-
-};
-
-updateCounter();
+}, 80);   // speed control
 
 });
 
@@ -1501,9 +1490,7 @@ counterStarted = true;
 window.addEventListener("scroll", () => {
 
 const statsSection = document.querySelector(".stats-grid");
-
 const position = statsSection.getBoundingClientRect().top;
-
 const screenHeight = window.innerHeight;
 
 if(position < screenHeight - 100){
