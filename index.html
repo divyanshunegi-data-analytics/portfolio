@@ -886,7 +886,6 @@ transform:translateX(0);
                             <span class="stat-label">Years Experience</span>
                         </div>
                     </div>
-                </div>
 
                 <div class="about-image">
                     <img src="profile.photo.png" alt="Divyanshu Negi" class="about-profile-img">
@@ -1405,13 +1404,15 @@ project.style.display = "none";
 
 }
 
-// COUNTER ANIMATION
-
 // STATS COUNTER ANIMATION
 
 const counters = document.querySelectorAll(".stat-number");
 
+let counterStarted = false;
+
 function startCounter(){
+
+if(counterStarted) return;
 
 counters.forEach(counter => {
 
@@ -1421,14 +1422,14 @@ let count = 0;
 
 const updateCounter = () => {
 
-const increment = target / 50;
+const increment = target / 60;
 
 if(count < target){
 
 count += increment;
 counter.innerText = Math.ceil(count);
 
-setTimeout(updateCounter,40);
+setTimeout(updateCounter,30);
 
 }
 
@@ -1442,9 +1443,23 @@ updateCounter();
 
 });
 
+counterStarted = true;
+
 }
 
-window.addEventListener("scroll",startCounter);
+window.addEventListener("scroll", () => {
+
+const statsSection = document.querySelector(".stats-grid");
+
+const position = statsSection.getBoundingClientRect().top;
+
+const screenHeight = window.innerHeight;
+
+if(position < screenHeight - 100){
+startCounter();
+}
+
+});
     
 </script>
 
