@@ -735,6 +735,26 @@ cursor:pointer;
 .project-image:hover{
 transform:scale(1.05);
 }
+
+.project-filter{
+text-align:center;
+margin-bottom:40px;
+}
+
+.project-filter button{
+padding:10px 20px;
+margin:5px;
+border:none;
+background:#38bdf8;
+color:white;
+border-radius:20px;
+cursor:pointer;
+font-weight:500;
+}
+
+.project-filter button:hover{
+background:#0284c7;
+}
     
 </style>
 </head>
@@ -1003,10 +1023,18 @@ transform:scale(1.05);
 </p>
 </div>
 
+<div class="project-filter">
+
+<button onclick="filterProjects('all')">All</button>
+<button onclick="filterProjects('python')">Python</button>
+<button onclick="filterProjects('powerbi')">Power BI</button>
+
+</div>
+
 <div class="projects-grid">
 
 <!-- Project 1 -->
-<div class="project-card">
+<div class="project-card python">
 
 <img src="ipl-project.png" class="project-image" onclick="openModal(this.src)">
 
@@ -1044,7 +1072,7 @@ Live Demo
 </div>
 
     <!-- Project 2 -->
-<div class="project-card">
+<div class="project-card powerbi">
 
 <img src="sales-loss-dashboard.png.png" class="project-image" onclick="openModal(this.src)">
 
@@ -1333,6 +1361,28 @@ let modal = document.getElementById("imageModal");
 if(event.target == modal){
 modal.style.display = "none";
 }
+}
+
+function filterProjects(category){
+
+let projects = document.querySelectorAll(".project-card");
+
+projects.forEach(project => {
+
+if(category === "all"){
+project.style.display = "block";
+}
+
+else if(project.classList.contains(category)){
+project.style.display = "block";
+}
+
+else{
+project.style.display = "none";
+}
+
+});
+
 }
     
 </script>
