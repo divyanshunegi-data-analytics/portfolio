@@ -694,6 +694,37 @@ opacity:1;
 transform:translateY(0);
 }
 
+/* Modal Image Preview */
+
+.modal{
+display:none;
+position:fixed;
+z-index:1000;
+padding-top:60px;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+}
+
+.modal-content{
+display:block;
+margin:auto;
+max-width:80%;
+max-height:80%;
+border-radius:10px;
+}
+
+.close-modal{
+position:absolute;
+top:20px;
+right:40px;
+color:white;
+font-size:40px;
+cursor:pointer;
+}
+    
 </style>
 </head>
 
@@ -966,7 +997,7 @@ transform:translateY(0);
 <!-- Project 1 -->
 <div class="project-card">
 
-<img src="ipl-project.png" class="project-image">
+<img src="ipl-project.png" class="project-image" onclick="openModal(this.src)">
 
 <div class="project-content">
 
@@ -1004,7 +1035,7 @@ Live Demo
     <!-- Project 2 -->
 <div class="project-card">
 
-<img src="sales-loss-dashboard.png.png" class="project-image">
+<img src="sales-loss-dashboard.png.png" class="project-image" onclick="openModal(this.src)">
 
 <div class="project-content">
 
@@ -1276,9 +1307,26 @@ document.querySelector(".about-image").style.opacity="1";
 }
 
 window.addEventListener("scroll", animateAbout);
+
+function openModal(src){
+document.getElementById("imageModal").style.display="block";
+document.getElementById("modalImage").src=src;
+}
+
+function closeModal(){
+document.getElementById("imageModal").style.display="none";
+}
     
 </script>
 
+<div id="imageModal" class="modal">
+
+<span class="close-modal" onclick="closeModal()">&times;</span>
+
+<img class="modal-content" id="modalImage">
+
+</div>
+    
 </body>
 
 </html>
