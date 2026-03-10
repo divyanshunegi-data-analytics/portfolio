@@ -724,6 +724,17 @@ color:white;
 font-size:40px;
 cursor:pointer;
 }
+
+.project-image{
+width:100%;
+border-radius:10px;
+transition:transform 0.3s ease;
+cursor:pointer;
+}
+
+.project-image:hover{
+transform:scale(1.05);
+}
     
 </style>
 </head>
@@ -1315,6 +1326,13 @@ document.getElementById("modalImage").src=src;
 
 function closeModal(){
 document.getElementById("imageModal").style.display="none";
+}
+
+window.onclick = function(event){
+let modal = document.getElementById("imageModal");
+if(event.target == modal){
+modal.style.display = "none";
+}
 }
     
 </script>
