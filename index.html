@@ -1238,7 +1238,7 @@ Live Demo
 </div>
 
 <!-- Project 3 -->
-<div class="project-card project-right powerbi">
+<div class="project-card project-left powerbi">
 
 <img src="sales-performance-dashboard.png" class="project-image" onclick="openModal(this.src)">
 
@@ -1534,11 +1534,11 @@ let projects = document.querySelectorAll(".project-card");
 projects.forEach(project => {
 
 if(category === "all"){
-project.style.display = "block";
+project.style.display = "";
 }
 
 else if(project.classList.contains(category)){
-project.style.display = "block";
+project.style.display = "";
 }
 
 else{
