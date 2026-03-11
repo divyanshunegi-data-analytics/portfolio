@@ -867,11 +867,71 @@ margin:5px;
 display:inline-block;
 font-size:13px;
 }
+
+.hero-profile-img{
+opacity:0;
+animation:fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:scale(0.95);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+/* PRELOADER */
+
+#preloader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:#020617;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.loader{
+color:#38bdf8;
+font-size:48px;
+font-weight:700;
+letter-spacing:4px;
+animation:pulse 1.2s infinite;
+}
+
+@keyframes pulse{
+0%{
+transform:scale(1);
+opacity:0.7;
+}
+50%{
+transform:scale(1.2);
+opacity:1;
+}
+100%{
+transform:scale(1);
+opacity:0.7;
+}
+}
     
 </style>
 </head>
 
 <body>
+
+<!-- Preloader -->
+<div id="preloader">
+  <div class="loader">DN</div>
+</div>
+    
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -924,7 +984,7 @@ font-size:13px;
                     <div class="floating-element" style="--delay: 1s"></div>
                     <div class="floating-element" style="--delay: 2s"></div>
                 </div>
-                <img src="profile.photo.png" alt="Divyanshu Negi" class="hero-profile-img">
+                <img src="profile.photo.png" alt="Divyanshu Negi" class="hero-profile-img loading="eager"">
             </div>
         </div>
         <div class="scroll-indicator">
@@ -1635,6 +1695,19 @@ function closeProjectModal(){
 document.getElementById("projectModal").style.display="none";
 
 }
+
+// PRELOADER
+
+window.addEventListener("load", function(){
+
+const preloader = document.getElementById("preloader");
+
+setTimeout(()=>{
+preloader.style.opacity = "0";
+preloader.style.visibility = "hidden";
+},800);
+
+});
     
 </script>
 
